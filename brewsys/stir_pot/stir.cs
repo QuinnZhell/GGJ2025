@@ -12,6 +12,8 @@ public partial class stir : Sprite2D
 	// Radius X Y of the cauldron
 	private float radiusX = 100.0f; // X radius of the cauldron
 	private float radiusY = 75.0f; // Y radius of the cauldron
+	private bool isStirring = false; // Track if stirring is active
+
 
 	public override void _Ready()
 	{
@@ -37,24 +39,37 @@ public partial class stir : Sprite2D
 		Vector2 direction = mousePosition - potPosition;
 
 		// If the point is outside the ellipse (i.e., outside of the normalised bounds of 1 in both x and y)
-
 		float ellipseEquation = (float)(Math.Pow(direction.X, 2) / Math.Pow(radiusX, 2) + Math.Pow(direction.Y, 2) / Math.Pow(radiusY, 2));
 
-		if (ellipseEquation > 1)
+		if (ellipseEquation <= 1 && Input.IsMouseButtonPressed(MouseButton.Left))
 		{
-			direction = direction.Normalized(); // Normalise the direction to ensure it's inside the ellipse
-												// Scale the direction back by the ellipse's radii
-			direction.X *= radiusX;
-			direction.Y *= radiusY;
-
-			// Set mouse position if it wonders outside the boundaries of the cauldron
-			Input.SetMouseMode(Input.MouseModeEnum.Hidden); // Hide mouse
-			Input.WarpMouse(potPosition + direction); // Move the mouse to the constrained position
+			isStirring = true;
 		}
 
-		currentAngle = direction.Angle();  // Get the angle from the ladle to the mouse
+		if (isStirring)
+		{
+			if (ellipseEquation > 1)
+			{
+				direction = direction.Normalized(); // Normalise the direction to ensure it's inside the ellipse
+				// Scale the direction back by the ellipse's radii
+				direction.X *= radiusX;
+				direction.Y *= radiusY;
 
-		// Move the ladle to follow the mouse position directly
-		GlobalPosition = potPosition + direction;
+				// Set mouse position if it wonders outside the boundaries of the cauldron
+				Input.SetMouseMode(Input.MouseModeEnum.Hidden); // Hide mouse
+				Input.WarpMouse(potPosition + direction); // Move the mouse to the constrained position
+			}
+			GlobalPosition = potPosition + direction;
+		}
+		else 
+		{
+			GlobalPosition = potPosition + direction;
+		}
+
+		if (!Input.IsMouseButtonPressed(MouseButton.Left))
+		{
+			isStirring = false;
+		}
+		currentAngle = direction.Angle();  // Get the angle from the ladle to the mouse
 	}
 }
