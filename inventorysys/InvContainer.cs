@@ -10,11 +10,12 @@ public partial class InvContainer : Node
     
 
 
-    public InvContainer(string name, int quantity, Ingredient ingredient)
+    public InvContainer(string name, int quantity, Ingredient ingredient, bool empty)
     {
         _name = name;
         _quantity = quantity;
         _ingredient = ingredient;
+        _empty = empty;
     }
 
     #region public methods

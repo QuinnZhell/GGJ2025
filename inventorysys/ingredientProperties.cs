@@ -38,14 +38,14 @@ public partial class IngredientProperties : Resource
     //Randomise it
     public IngredientProperties()
     {
-        var rng = new RandomNumberGenerator();
-        rng.Randomize();
+        var random = new RandomNumberGenerator();
+        random.Randomize();
         //Randomise the bubble, potency, and stability scores
-        Vector3 x = new Vector3(rng.RandfRange(-1, 1), rng.RandfRange(-1, 1), rng.RandfRange(-1, 1));
-        Vector3 y = new Vector3(rng.RandfRange(-0.1, 0.1), rng.RandfRange(-0.1, 0.1), rng.RandfRange(-0.1, 0.1));
-        Vector3 x = new Vector3(rng.RandfRange(-0.5, 0.5), rng.RandfRange(-0.5, 0.5), rng.RandfRange(-0.5, 0.5));
+        Vector3 x = new Vector3(random.RandfRange(-1f, 1f), random.RandfRange(-1f, 1f), random.RandfRange(-1f, 1f));
+        Vector3 y = new Vector3(random.RandfRange(-0.1f, 0.1f), random.RandfRange(-0.1f, 0.1f), random.RandfRange(-0.1f, 0.1f));
+        Vector3 z = new Vector3(random.RandfRange(-0.5f, 0.5f), random.RandfRange(-0.5f, 0.5f), random.RandfRange(-0.5f, 0.5f));
 
-        int a = rng.randi_range(0, 10);
+        int a = random.RandiRange(0, 10);
         switch (a)
         {
             case 0:

@@ -6,7 +6,6 @@ public partial class Inventory : Node
 {
 	private Godot.Collections.Array<InvContainer> _containerArray;
 	private int _coins;
-    private int[] x;
 
 
     #region Accessor methods
@@ -25,7 +24,7 @@ public partial class Inventory : Node
     public void Add(string cn, int q, Ingredient i, bool e)
     {
         InvContainer temp = new InvContainer(cn, q, i, e);
-        _containerArray.push_back(temp);
+        _containerArray.Append(temp);
     }
 
     //Container & Ingredient unpopulated, properties provided
@@ -33,7 +32,7 @@ public partial class Inventory : Node
     {
         Ingredient tempi = new Ingredient(n, d, bc, ip, uc, um,  oc, cd, cdt);
         InvContainer temp = new InvContainer(cn, q, tempi, e);
-        _containerArray.push_back(temp);
+        _containerArray.Append(temp);
     }
     //All unpopulated
     public void Add(string cn, int q, string n, string d, int bc, Vector3 bs, Vector3 ds, Vector3 ips, Attributes att, bool uc, bool um, bool oc, float cd, float cdt, bool e)
@@ -41,21 +40,16 @@ public partial class Inventory : Node
         IngredientProperties tempip = new IngredientProperties(bs, ds, ips, att);
         Ingredient tempi = new Ingredient(n, d, bc, tempip, uc, um, oc, cd, cdt);
         InvContainer temp = new InvContainer(cn, q, tempi, e);
-        _containerArray.push_back(temp);
+        _containerArray.Append(temp);
     }
 
     #endregion
 
     #region remove
-    //Remove selected array item or int. If none specified, remove final item
+    //Remove selected int. If none specified, remove final item
     public void Remove()
     {
-        _containerArray.resize(_containerArray.size() - 1);
-    }
-
-    public void Removev(InvContainer ic)
-    {
-        _containerArray.erase(ic);
+        _containerArray.Resize(_containerArray.Size() - 1);
     }
 
     public void Remove(int i)
@@ -65,21 +59,16 @@ public partial class Inventory : Node
     #endregion
 
     #region GetContainer
-    //Specify index and get an inv container. Or an Invcontainer and get its index (why would you want to do this)
+    //Specify index and get an inv container.
     public InvContainer GetContainer(int i)
     {
         return _containerArray[i];
-    }
-
-    public int GetContainer(InvContainer ic)
-    {
-        return _containerArray.find(ic);
     }
     #endregion
 
     #region Getters
 
-    public InvContainer[] GetInvevntory()
+    public Godot.Collections.Array<InvContainer> GetInvevntory()
     {
         return _containerArray;
     }
