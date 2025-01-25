@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://8cghtbg25inj"]
+
+[ext_resource type="Script" path="res://brewsys/stir_pot/stir.cs" id="1_pooib"]
+
+[sub_resource type="Gradient" id="Gradient_xo5nk"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_icas5"]
+gradient = SubResource("Gradient_xo5nk")
+
+[sub_resource type="Gradient" id="Gradient_grf06"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nnbsg"]
+gradient = SubResource("Gradient_grf06")
+fill_from = Vector2(0.96789, 0.178899)
+fill_to = Vector2(1, 0.123853)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ladle" type="Sprite2D" parent="."]
+position = Vector2(590, 303)
+scale = Vector2(0.171875, 0.859375)
+texture = SubResource("GradientTexture2D_icas5")
+script = ExtResource("1_pooib")
+
+[node name="pot" type="Sprite2D" parent="."]
+position = Vector2(549, 337)
+scale = Vector2(0.5, 0.484375)
+texture = SubResource("GradientTexture2D_nnbsg")

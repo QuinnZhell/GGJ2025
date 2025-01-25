@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="IngredientProperties" load_steps=2 format=3 uid="uid://bkarxmbr3iagv"]
+
+[ext_resource type="Script" path="res://inventorysys/IngredientProperties.cs" id="1_i1mns"]
+
+[resource]
+script = ExtResource("1_i1mns")
+Name = "Salt"
+Description = "Salt from the sea"
+BaseStats = Vector3(0.1, 0.1, 0.1)
+DynamicStats = Vector3(0.1, 0.1, 0.1)
+ImpulseStats = Vector3(0.2, 0.2, 0.2)
+attribute = 0
+baseCost = 1.5

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c6v36by04u1t6"]
 
-[ext_resource type="Script" path="res://brewsys/stoke.cs" id="1_0gmbp"]
-[ext_resource type="AudioStream" uid="uid://37dsrpx1y1ht" path="res://assets/audio/fire-sound-222359.mp3" id="2_lkwbb"]
+[ext_resource type="Script" path="res://brewsys/stoke_flames/stoke.cs" id="1_qp8kn"]
+[ext_resource type="AudioStream" uid="uid://37dsrpx1y1ht" path="res://assets/audio/fire-sound-222359.mp3" id="2_rfv22"]
 
 [sub_resource type="Gradient" id="Gradient_4weam"]
 offsets = PackedFloat32Array(0, 0.357143, 0.850649, 0.954545, 1)
@@ -16,9 +16,9 @@ gradient = SubResource("Gradient_4weam")
 position = Vector2(205.984, -270.236)
 scale = Vector2(64, 64)
 texture = SubResource("GradientTexture2D_5ybbc")
-script = ExtResource("1_0gmbp")
+script = ExtResource("1_qp8kn")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2D"]
 position = Vector2(-3.2185, 4.22244)
 scale = Vector2(0.015625, 0.015625)
-stream = ExtResource("2_lkwbb")
+stream = ExtResource("2_rfv22")

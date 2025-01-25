@@ -7,7 +7,7 @@ public enum Attributes {NONE, FIRE_RESISTANCE, WATER_BREATHING, FLIGHT, STRENGTH
 
 
 [GlobalClass]
-public partial class ingredientProperties : Resource
+public partial class IngredientProperties : Resource
 {
     [Export]
     public string Name { get; set; }
@@ -31,8 +31,14 @@ public partial class ingredientProperties : Resource
     [Export]
     public Attributes attribute { get; set; }
 
+<<<<<<< HEAD
     //Ingredient Base Price
     [Export]
     public int BasePrice { get; set; }
+=======
+    //Price
+    [Export]
+    public float baseCost { get; set; }
+>>>>>>> main
 
 }
