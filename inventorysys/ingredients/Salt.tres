@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="IngredientProperties" load_steps=2 format=3 uid="uid://bkarxmbr3iagv"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://dssy24rthe2xb"]
 
-[ext_resource type="Script" path="res://inventorysys/IngredientProperties.cs" id="1_i1mns"]
+[ext_resource type="Script" path="res://inventorysys/Ingredient.cs" id="1_1i6eq"]
+[ext_resource type="Resource" uid="uid://chixhekokx07h" path="res://inventorysys/Ingredient Property Templates/bubbly.tres" id="1_ns5dt"]
 
 [resource]
-script = ExtResource("1_i1mns")
+script = ExtResource("1_1i6eq")
 Name = "Salt"
-Description = "Salt from the sea"
-BaseStats = Vector3(0.1, 0.1, 0.1)
-DynamicStats = Vector3(0.1, 0.1, 0.1)
-ImpulseStats = Vector3(0.2, 0.2, 0.2)
-attribute = 0
+Description = "Salt straight from the sea!"
 baseCost = 1.5
+properties = ExtResource("1_ns5dt")
+useCooldown = false
+onCooldown = false
+cdTime = 0.5
