@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6v36by04u1t6"]
+
+[ext_resource type="Script" path="res://brewsys/stoke.cs" id="1_0gmbp"]
+[ext_resource type="AudioStream" uid="uid://37dsrpx1y1ht" path="res://assets/audio/fire-sound-222359.mp3" id="2_lkwbb"]
+
+[sub_resource type="Gradient" id="Gradient_4weam"]
+offsets = PackedFloat32Array(0, 0.357143, 0.850649, 0.954545, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0.87013, 0.87013, 0.87013, 1, 0.960474, 0.960474, 0.960474, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5ybbc"]
+gradient = SubResource("Gradient_4weam")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(205.984, -270.236)
+scale = Vector2(64, 64)
+texture = SubResource("GradientTexture2D_5ybbc")
+script = ExtResource("1_0gmbp")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2D"]
+position = Vector2(-3.2185, 4.22244)
+scale = Vector2(0.015625, 0.015625)
+stream = ExtResource("2_lkwbb")
