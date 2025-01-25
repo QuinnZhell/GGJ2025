@@ -25,7 +25,6 @@ public partial class IngredientProperties : Resource
     //Attribute which ingredient adds
     [Export]
     public Attributes attribute { get; set; }
-
     #endregion
 
     public IngredientProperties (Vector3 bs, Vector3 ds, Vector3 ips, Attributes att)

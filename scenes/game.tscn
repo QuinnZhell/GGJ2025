@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwxn26tq3nep0"]
+
+[ext_resource type="Script" path="res://scenes/Cauldron.cs" id="1_6ugbl"]
+[ext_resource type="PackedScene" uid="uid://c6v36by04u1t6" path="res://brewsys/stoke_flames/stoke_flames.tscn" id="1_oh0p4"]
+[ext_resource type="PackedScene" uid="uid://dr5473butebau" path="res://Scene Objects/Needy Bars/BarMaster.tscn" id="2_pw4vv"]
+[ext_resource type="PackedScene" uid="uid://8cghtbg25inj" path="res://brewsys/stir_pot/stir.tscn" id="4_fku7c"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_6ugbl")
+
+[node name="stoke_flames" parent="." instance=ExtResource("1_oh0p4")]
+
+[node name="BarMaster" parent="." instance=ExtResource("2_pw4vv")]
+
+[node name="stir_pot" parent="." instance=ExtResource("4_fku7c")]
+position = Vector2(300, 150)
