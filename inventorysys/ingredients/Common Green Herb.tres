@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ingredientProperties" load_steps=2 format=3 uid="uid://bhd6k804tu3hu"]
+
+[ext_resource type="Script" path="res://inventorysys/ingredientProperties.cs" id="1_mro2l"]
+
+[resource]
+script = ExtResource("1_mro2l")
+Name = "Common Green Herb"
+Description = "A Common Green Herb found in the dirt"
+BaseStats = Vector3(5, 5, 5)
+DynamicStats = Vector3(2, 2, 2)
+ImpulseStats = Vector3(1, 2, 3)
+attribute = 0
+BasePrice = 20

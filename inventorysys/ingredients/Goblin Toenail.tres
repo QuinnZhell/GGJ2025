@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ingredientProperties" load_steps=2 format=3 uid="uid://c5aa4yeq11bk5"]
+
+[ext_resource type="Script" path="res://inventorysys/ingredientProperties.cs" id="1_k80cv"]
+
+[resource]
+script = ExtResource("1_k80cv")
+Name = "Goblin Toenail"
+Description = "Contains over "
+BaseStats = Vector3(5, 5, 5)
+DynamicStats = Vector3(2, 2, 2)
+ImpulseStats = Vector3(1, 2, 3)
+attribute = 0
+BasePrice = 20

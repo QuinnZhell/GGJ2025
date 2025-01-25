@@ -7,15 +7,18 @@
 script = ExtResource("1_b2jlq")
 
 [node name="Stability" parent="." instance=ExtResource("1_vowf2")]
+metadata/_edit_use_anchors_ = true
 
 [node name="Potency" parent="." instance=ExtResource("1_vowf2")]
 offset_top = 50.0
 offset_bottom = 50.0
 NaturalRate = -2.0
 GoalValue = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Bubbliness" parent="." instance=ExtResource("1_vowf2")]
 offset_top = 100.0
 offset_bottom = 100.0
 NaturalRate = 1.0
 GoalValue = 50.0
+metadata/_edit_use_anchors_ = true
