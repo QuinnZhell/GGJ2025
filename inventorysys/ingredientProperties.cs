@@ -1,6 +1,10 @@
 using Godot;
+using System;
 
-enum Attributes {NONE, FIRE_RESISTANCE, WATER_BREATHING, FLIGHT, STRENGTH, SPEED, INVISIBILITY, COLD_RESISTANCE, RIZZ, MAGIC_BOOST, TELEPORTATION}
+public enum Attributes {NONE, FIRE_RESISTANCE, WATER_BREATHING, FLIGHT, STRENGTH, SPEED, INVISIBILITY, COLD_RESISTANCE, RIZZ, MAGIC_BOOST, TELEPORTATION}
+
+
+
 
 [GlobalClass]
 public partial class ingredientProperties : Resource
@@ -8,17 +12,20 @@ public partial class ingredientProperties : Resource
     [Export]
     public string Name { get; set; }
 
+    [Export]
+    public string Description { get; set; }
+
     //base stats which effect the potions overall score
     [Export]
-    public float[3] BaseStats { get; set; }
+    public Vector3 BaseStats { get; set; }
 
     //Change over time stats which affect how the potion changes from tick to tick
     [Export]
-    public float[3] DynamicStats { get; set; }
+    public Vector3 DynamicStats { get; set; }
 
     //Effect on the potion when ingredient added initially
     [Export]
-    public float[3] ImpulseStats { get; set; }
+    public Vector3 ImpulseStats { get; set; }
 
     //Attribute which ingredient adds
     [Export]
