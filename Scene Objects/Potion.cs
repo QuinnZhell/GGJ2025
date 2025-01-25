@@ -6,6 +6,8 @@ public partial class Potion : Node2D
 	BarMaster barMaster;
 	RichTextLabel score;
 	Timer timer;
+	public bool failure = false;
+
 	public Godot.Collections.Array<Ingredient> _ingredientArray;
 
     bool timeEnded = false;
@@ -44,5 +46,6 @@ public partial class Potion : Node2D
 	private void _on_timer_timeout()
 	{
 		timeEnded = true;
+		failure = barMaster.CheckFail();
 	}
 }
