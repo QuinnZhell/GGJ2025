@@ -20,6 +20,8 @@ public partial class NeedyBar : Control
     public float StirMod = 0f;
     public float SpitMod = 0f;
 
+    public bool failure = false;
+
     private ProgressBar _progressBar;
     private ColorRect _colorRect;
     private ColorRect _goalRect; // For goal visualization
@@ -113,7 +115,7 @@ public partial class NeedyBar : Control
         // Check explosion condition
         if (ActualValue <= MinValue || ActualValue >= MaxValue)
         {
-            //GD.Print("Potion Exploded!"); // Replace with actual lose condition (Signal maybe?)
+            failure = true;
         }
     }
 
