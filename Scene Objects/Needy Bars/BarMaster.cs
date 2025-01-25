@@ -111,4 +111,14 @@ public partial class BarMaster : Node2D
         return overallScore;
 
     }   
+
+    public bool CheckFail()
+    {
+        if (bars[BarType.Stability].failure == true || bars[BarType.Potency].failure == true || bars[BarType.Bubbliness].failure == true)
+        {
+            return true;
+        }
+
+        return false;
+    }
 }
