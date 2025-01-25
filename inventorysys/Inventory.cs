@@ -49,12 +49,12 @@ public partial class Inventory : Node
     //Remove selected int. If none specified, remove final item
     public void Remove()
     {
-        _containerArray.Resize(_containerArray.Size() - 1);
+        _containerArray.Resize(_containerArray.Count());
     }
 
     public void Remove(int i)
     {
-        _containerArray.remove_at(i);
+        _containerArray.RemoveAt(i);
     }
     #endregion
 
