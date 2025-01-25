@@ -13,19 +13,30 @@ public partial class Task : Node
 	private taskType requirement;
 	private int requiredValue;
 	//TODO: Another variable with ingredient/attribute type
+	private Ingredient ingredient;
 	
 	public Task(taskType task, int value)
 	{
 		setRequirement(task);
 		setRequiredValue(value);
 	}
-	private void setRequirement(taskType task)
+    public Task(taskType task, int value, Ingredient ingredient)
+    {
+        setRequirement(task);
+        setRequiredValue(value);
+		setIngredient(ingredient);
+    }
+    private void setRequirement(taskType task)
 	{
 		this.requirement = task;
 	}
 	private void setRequiredValue(int value)
 	{
 		this.requiredValue = value;
+	}
+	private void setIngredient(Ingredient ingredient)
+	{
+		this.ingredient = ingredient;
 	}
 	public bool completed()
 	{
