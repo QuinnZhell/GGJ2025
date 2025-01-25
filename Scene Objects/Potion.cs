@@ -12,12 +12,23 @@ public partial class Potion : Node2D
 
     bool timeEnded = false;
 
+	public Potion(BarMaster barMaster, RichTextLabel score, Timer timer)
+	{
+		this.barMaster = barMaster;
+		this.score = score;
+		this.timer = timer;
+	}
+	public float getScore()
+	{
+		return barMaster.CalculateOverallScore();
+	}
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		barMaster = GetNode<BarMaster>("BarMaster");
-		score = GetNode<RichTextLabel>("Score");
-		timer = GetNode<Timer>("Timer");
+		//barMaster = GetNode<BarMaster>("BarMaster");
+		//score = GetNode<RichTextLabel>("Score");
+		//timer = GetNode<Timer>("Timer");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

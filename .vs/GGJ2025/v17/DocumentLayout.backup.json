@@ -3,12 +3,43 @@
   "WorkspaceRootPath": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\",
   "Documents": [
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\desktop\\git\\ggj2025\\inventorysys\\ingredientproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:inventorysys\\ingredientproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\scene objects\\needy bars\\barmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:scene objects\\needy bars\\barmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> main
+=======
       "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\scene objects\\shop\\shopslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:scene objects\\shop\\shopslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> main
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\scenes\\Options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scenes\\Options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\scenes\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scenes\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\scene objects\\potion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:scene objects\\potion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> main
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\inventorysys\\ingredientproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:inventorysys\\ingredientproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\desktop\\git\\ggj2025\\scene objects\\potion requests\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:scene objects\\potion requests\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\desktop\\git\\ggj2025\\scene objects\\needy bars\\barmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:scene objects\\needy bars\\barmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -20,28 +51,25 @@
       "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\desktop\\git\\ggj2025\\ggj2025.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:ggj2025.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
 =======
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\scenes\\Cauldron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scenes\\Cauldron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\scenes\\Options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scenes\\Options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\scenes\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scenes\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\inventorysys\\ingredientproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:inventorysys\\ingredientproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\scene objects\\needy bars\\needybar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:scene objects\\needy bars\\needybar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\inventorysys\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:inventorysys\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\inventorysys\\invcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:inventorysys\\invcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\inventorysys\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:inventorysys\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
 >>>>>>> main
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\scene objects\\needy bars\\barmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:scene objects\\needy bars\\barmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+<<<<<<< HEAD
     },
     {
 <<<<<<< HEAD
@@ -51,14 +79,12 @@
     {
       "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\brewsys\\stoke_flames\\stoke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:brewsys\\stoke_flames\\stoke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\scene objects\\needy bars\\needybar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:scene objects\\needy bars\\needybar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
 >>>>>>> main
 =======
       "AbsoluteMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|c:\\users\\logan\\documents\\ggj2025\\ggj2025\\ggj2025.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{1C01AE55-C4C9-4BCE-B8AE-97A255AEE3B1}|GGJ2025.csproj|solutionrelative:ggj2025.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+>>>>>>> main
+=======
 >>>>>>> main
     }
   ],
@@ -69,26 +95,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
 <<<<<<< HEAD
-              "DocumentIndex": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+              "DocumentIndex": 2,
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\logan\\Desktop\\Git\\GGJ2025\\Scene Objects\\Potion Requests\\Task.cs",
+              "RelativeDocumentMoniker": "Scene Objects\\Potion Requests\\Task.cs",
+              "ToolTip": "C:\\Users\\logan\\Desktop\\Git\\GGJ2025\\Scene Objects\\Potion Requests\\Task.cs*",
+              "RelativeToolTip": "Scene Objects\\Potion Requests\\Task.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T18:01:42.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ingredientProperties.cs",
+              "DocumentMoniker": "C:\\Users\\logan\\Desktop\\Git\\GGJ2025\\inventorysys\\ingredientProperties.cs",
+              "RelativeDocumentMoniker": "inventorysys\\ingredientProperties.cs",
+              "ToolTip": "C:\\Users\\logan\\Desktop\\Git\\GGJ2025\\inventorysys\\ingredientProperties.cs",
+              "RelativeToolTip": "inventorysys\\ingredientProperties.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T17:55:31.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Request.cs",
               "DocumentMoniker": "C:\\Users\\logan\\Desktop\\Git\\GGJ2025\\Scene Objects\\Potion Requests\\Request.cs",
               "RelativeDocumentMoniker": "Scene Objects\\Potion Requests\\Request.cs",
-              "ToolTip": "C:\\Users\\logan\\Desktop\\Git\\GGJ2025\\Scene Objects\\Potion Requests\\Request.cs",
-              "RelativeToolTip": "Scene Objects\\Potion Requests\\Request.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAIwAgAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\logan\\Desktop\\Git\\GGJ2025\\Scene Objects\\Potion Requests\\Request.cs*",
+              "RelativeToolTip": "Scene Objects\\Potion Requests\\Request.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
 =======
+              "DocumentIndex": 3,
               "Title": "stir.cs",
               "DocumentMoniker": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\brewsys\\stir_pot\\stir.cs",
               "RelativeDocumentMoniker": "brewsys\\stir_pot\\stir.cs",
               "ToolTip": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\brewsys\\stir_pot\\stir.cs",
               "RelativeToolTip": "brewsys\\stir_pot\\stir.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
 >>>>>>> main
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T20:01:51.595Z",
@@ -96,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ShopSlot.cs",
               "DocumentMoniker": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\Scene Objects\\Shop\\ShopSlot.cs",
               "RelativeDocumentMoniker": "Scene Objects\\Shop\\ShopSlot.cs",
@@ -109,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "stoke.cs",
               "DocumentMoniker": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\brewsys\\stoke_flames\\stoke.cs",
               "RelativeDocumentMoniker": "brewsys\\stoke_flames\\stoke.cs",
@@ -150,6 +204,9 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 3,
+=======
               "DocumentIndex": 0,
               "Title": "ShopSlot.cs",
               "DocumentMoniker": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\Scene Objects\\Shop\\ShopSlot.cs",
@@ -176,32 +233,37 @@
             },
             {
               "$type": "Document",
+=======
+>>>>>>> main
               "DocumentIndex": 5,
+>>>>>>> main
               "Title": "BarMaster.cs",
               "DocumentMoniker": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\Scene Objects\\Needy Bars\\BarMaster.cs",
               "RelativeDocumentMoniker": "Scene Objects\\Needy Bars\\BarMaster.cs",
               "ToolTip": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\Scene Objects\\Needy Bars\\BarMaster.cs",
               "RelativeToolTip": "Scene Objects\\Needy Bars\\BarMaster.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADgAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T03:15:57.746Z"
+              "WhenOpened": "2025-01-25T22:19:24.423Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "NeedyBar.cs",
-              "DocumentMoniker": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\Scene Objects\\Needy Bars\\NeedyBar.cs",
-              "RelativeDocumentMoniker": "Scene Objects\\Needy Bars\\NeedyBar.cs",
-              "ToolTip": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\Scene Objects\\Needy Bars\\NeedyBar.cs",
-              "RelativeToolTip": "Scene Objects\\Needy Bars\\NeedyBar.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAAAKgAAAAAAAAAAAAAAA==",
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\inventorysys\\Inventory.cs",
+              "RelativeDocumentMoniker": "inventorysys\\Inventory.cs",
+              "ToolTip": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\inventorysys\\Inventory.cs",
+              "RelativeToolTip": "inventorysys\\Inventory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "WhenOpened": "2025-01-25T03:08:08.714Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "GGJ2025",
               "DocumentMoniker": "C:\\Users\\logan\\Desktop\\Git\\GGJ2025\\GGJ2025.csproj",
               "RelativeDocumentMoniker": "GGJ2025.csproj",
@@ -211,6 +273,9 @@
               "WhenOpened": "2025-01-25T01:40:02.834Z"
 =======
               "WhenOpened": "2025-01-25T03:08:08.714Z",
+=======
+              "WhenOpened": "2025-01-25T22:14:05.158Z",
+>>>>>>> main
               "EditorCaption": ""
 <<<<<<< HEAD
 >>>>>>> main
@@ -218,6 +283,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 6,
               "Title": "GGJ2025",
               "DocumentMoniker": "C:\\USERS\\LOGAN\\DOCUMENTS\\GGJ2025\\GGJ2025\\GGJ2025.csproj",
@@ -226,6 +292,57 @@
               "RelativeToolTip": "GGJ2025.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-01-25T01:40:02.834Z"
+>>>>>>> main
+=======
+              "DocumentIndex": 3,
+              "Title": "InvContainer.cs",
+              "DocumentMoniker": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\inventorysys\\InvContainer.cs",
+              "RelativeDocumentMoniker": "inventorysys\\InvContainer.cs",
+              "ToolTip": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\inventorysys\\InvContainer.cs",
+              "RelativeToolTip": "inventorysys\\InvContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T22:14:03.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ingredient.cs",
+              "DocumentMoniker": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\inventorysys\\Ingredient.cs",
+              "RelativeDocumentMoniker": "inventorysys\\Ingredient.cs",
+              "ToolTip": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\inventorysys\\Ingredient.cs",
+              "RelativeToolTip": "inventorysys\\Ingredient.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T22:14:01.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Potion.cs",
+              "DocumentMoniker": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\Scene Objects\\Potion.cs",
+              "RelativeDocumentMoniker": "Scene Objects\\Potion.cs",
+              "ToolTip": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\Scene Objects\\Potion.cs",
+              "RelativeToolTip": "Scene Objects\\Potion.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T22:13:49.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ingredientProperties.cs",
+              "DocumentMoniker": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\inventorysys\\ingredientProperties.cs",
+              "RelativeDocumentMoniker": "inventorysys\\ingredientProperties.cs",
+              "ToolTip": "C:\\Users\\logan\\Documents\\GGJ2025\\GGJ2025\\inventorysys\\ingredientProperties.cs",
+              "RelativeToolTip": "inventorysys\\ingredientProperties.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAACkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T22:11:25.505Z",
+              "EditorCaption": ""
 >>>>>>> main
             }
           ]

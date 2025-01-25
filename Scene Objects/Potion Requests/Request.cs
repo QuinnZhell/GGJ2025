@@ -9,18 +9,20 @@ public partial class Request : Node2D
 	private int minScore = 0;
 	private int goldReward = 0;
 	private bool fulfilled = false;
-
+	private Potion potion;
 	private Task[] tasks;
 
-	public Request(int score, int reward)
+	public Request(int score, int reward, Potion potion)
 	{
 		setMinScore(score);
 		setGoldReward(reward);
+		setPotion(potion);
 	}
-    public Request(int score, int reward, Task[] tasks)
+    public Request(int score, int reward, Potion potion, Task[] tasks)
     {
         setMinScore(score);
         setGoldReward(reward);
+		setPotion(potion);
         setTasks(tasks);
     }
 
@@ -37,7 +39,10 @@ public partial class Request : Node2D
 	{
 		this.tasks = tasks;
 	}
-
+	public void setPotion(Potion potion)
+	{
+		this.potion = potion;
+	}
 	public int getMinScore()
 	{
 		return minScore;
@@ -62,7 +67,14 @@ public partial class Request : Node2D
             }
         }
         //Then check if default requirement (potion score) has been met
-        //TODO: Check current potion score against minScore
+		if (potion.getScore() < minScore)
+		{
+			return false;
+		}
+		else
+		{
+			fulfilled = true;
+		}
         return fulfilled;
     }
     
