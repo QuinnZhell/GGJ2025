@@ -19,6 +19,6 @@ public partial class Cauldron : Node2D
 	public override void _Process(double delta)
 	{
 		barMaster.StokeChange(-(stoke.Temperature % 100) / 10 , stoke.Temperature / 10);
-        barMaster.StirChange(-(stir.stirringSpeed ), stir.stirringSpeed/2);
+        barMaster.StirChange(-(stir.StirringSpeed), stir.StirringSpeed / 2);
     }
 }

@@ -3,10 +3,11 @@ using System;
 
 public partial class stir : Sprite2D
 {
-	private float stirringSpeed = 0f; // Speed tracker for debugging
+	private float _stirringSpeed = 0f; // Speed tracker for debugging
+	public float StirringSpeed => _stirringSpeed;
 	private float currentAngle = 0f;
 	private float previousAngle = 0.0f;
-	private Vector2 potPosition = new Vector2(549, 337); // Hard coded since I couldn't figure out how to reference the node :)
+	private Vector2 potPosition = new Vector2(200, 200); // Hard coded since I couldn't figure out how to reference the node :)
 	private Vector2 startingPositionOffset = new Vector2(10, 10); // Offset for hand to ladle
 
 	// Radius X Y of the cauldron
@@ -16,7 +17,6 @@ public partial class stir : Sprite2D
 
 	public override void _Ready()
 	{
-		potPosition = GlobalPosition;
 	}
 
 	public override void _Process(double delta)
@@ -27,10 +27,10 @@ public partial class stir : Sprite2D
 		// Calculate angular velocity
 		float deltaAngle = Mathf.Abs(currentAngle - previousAngle);
 
-		stirringSpeed = (float)(deltaAngle / delta); // Angular velocity in radians/second
+		_stirringSpeed = (float)(deltaAngle / delta); // Angular velocity in radians/second
 		previousAngle = currentAngle;
 
-		GD.Print(stirringSpeed);
+		GD.Print(_stirringSpeed);
 	}
 
 	private void UpdateLadlePosition(Vector2 mousePosition)
