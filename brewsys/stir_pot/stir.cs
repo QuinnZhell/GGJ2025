@@ -4,17 +4,18 @@ using System;
 public partial class stir : Sprite2D
 {
 	private float stirringRadius = 2f;
-	private float stirringSpeed = 0f; // Speed tracker for debugging
+	public float stirringSpeed = 0f; // Speed tracker for debugging
 	private float potRadius = 150.0f;
 	private float ladleOffset = 20.0f; // Distance from the pot's edge to the ladle's circular path
 	private float currentAngle = 0f;
 	private float previousAngle = 0.0f;
-	private Vector2 potPosition = new Vector2(549, 337); // Hard coded since I couldn't figure out how to reference the node :)
+	private Vector2 potPosition; // Hard coded since I couldn't figure out how to reference the node :)
 
 	public override void _Ready()
 	{
 		// Calculate the effective stirring radius
 		stirringRadius = potRadius - ladleOffset;
+		potPosition = GlobalPosition;
 	}
 
 	public override void _Process(double delta)
