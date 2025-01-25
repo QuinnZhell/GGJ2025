@@ -1,5 +1,7 @@
 using Godot;
 
+enum Attributes {NONE, FIRE_RESISTANCE, WATER_BREATHING, FLIGHT, STRENGTH, SPEED, INVISIBILITY, COLD_RESISTANCE, RIZZ, MAGIC_BOOST, TELEPORTATION}
+
 [GlobalClass]
 public partial class ingredientProperties : Resource
 {
@@ -18,5 +20,8 @@ public partial class ingredientProperties : Resource
     [Export]
     public float[3] ImpulseStats { get; set; }
 
+    //Attribute which ingredient adds
+    [Export]
+    public Attributes attribute { get; set; }
 
 }
