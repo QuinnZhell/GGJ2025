@@ -14,6 +14,7 @@ public partial class Task : Node
 	private int requiredValue;
 	//TODO: Another variable with ingredient/attribute type
 	private Ingredient ingredient;
+	private bool potionFailed = false;
 	
 	public Task(taskType task, int value)
 	{
