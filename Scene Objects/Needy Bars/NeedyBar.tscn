@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvw7pwuq11jsa"]
+
+[ext_resource type="Script" path="res://Scene Objects/Needy Bars/NeedyBar.cs" id="1_y1vhf"]
+
+[node name="NeedyBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_y1vhf")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_right = 196.0
+offset_bottom = 27.0
+show_percentage = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 8.0
+offset_bottom = 27.0
