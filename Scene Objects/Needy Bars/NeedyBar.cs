@@ -4,6 +4,7 @@ using System;
 public partial class NeedyBar : Control
 {
     [Export] public float NaturalRate = 2f; // Passive change per second
+    private float ActualRate = 0f;
     [Export] public float BarSpeed = 0.1f;   // Base speed at which ActualValue reaches TargetValue
     [Export] public float GoalValue = 70f;   // Ideal value for max score
     [Export] public float GoalLenience = 10f;// Acceptable range for scoring
@@ -13,7 +14,11 @@ public partial class NeedyBar : Control
     private float ActualValue = 50f; // Current level
     private float MinValue = 0f;
     private float MaxValue = 100f;
-    public float Score = 0f;
+    public float Score = 100f;
+
+    public float StokeMod = 0f;
+    public float StirMod = 0f;
+    public float SpitMod = 0f;
 
     private ProgressBar _progressBar;
     private ColorRect _colorRect;
@@ -41,8 +46,12 @@ public partial class NeedyBar : Control
 
     public override void _Process(double delta)
     {
+
+        //Update Natural Rate
+        ActualRate = NaturalRate + StokeMod + SpitMod + StirMod;
+
         // Apply natural rate change
-        TargetValue += NaturalRate * (float)delta;
+        TargetValue += ActualRate * (float)delta;
 
         // Apply flat addition over time
         if (FlatAddition != 0)
@@ -88,6 +97,7 @@ public partial class NeedyBar : Control
         // Clamp within min/max range
         ActualValue = Mathf.Clamp(ActualValue, MinValue, MaxValue);
         TargetValue = Mathf.Clamp(TargetValue, MinValue, MaxValue);
+        Score = Mathf.Clamp(Score, 0f, 100f);
 
         // Update UI
         _progressBar.Value = ActualValue;
@@ -103,7 +113,7 @@ public partial class NeedyBar : Control
         // Check explosion condition
         if (ActualValue <= MinValue || ActualValue >= MaxValue)
         {
-            GD.Print("Potion Exploded!"); // Replace with actual lose condition (Signal maybe?)
+            //GD.Print("Potion Exploded!"); // Replace with actual lose condition (Signal maybe?)
         }
     }
 
@@ -115,12 +125,12 @@ public partial class NeedyBar : Control
         // Color based on proximity to goal
         if (distance < GoalLenience * 0.5f)
         {
-            Score += 2 * (float)GetProcessDeltaTime(); // Double score for gold area
+            Score += 3 * (float)GetProcessDeltaTime(); // Double score for gold area
             GD.Print("Score: " + Score);
         }
-        else if (distance < GoalLenience)
+        else if (distance > GoalLenience)
         {
-            Score += (float)GetProcessDeltaTime(); // Regular score for light green area
+            Score -= 3 * (float)GetProcessDeltaTime(); // Regular score for light green area
             GD.Print("Score: " + Score);
         }
 
@@ -167,9 +177,23 @@ public partial class NeedyBar : Control
         NaturalRate = newRate;
     }
 
+    public void AddToRate(float rateAdd)
+    {
+        NaturalRate += rateAdd;
+    }
+
     public void SetFlatAddition(float newAddition)
     {
         FlatAddition = newAddition;
+    }
+
+    public void Reset()
+    {
+        NaturalRate = 2f;
+        ActualValue = 50f;
+        Score = 0;
+        BarSpeed = 0.1f;
+        Score = 100f;
     }
 
     public override void _Input(InputEvent @event)

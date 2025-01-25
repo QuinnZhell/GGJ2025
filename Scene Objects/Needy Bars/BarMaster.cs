@@ -54,6 +54,31 @@ public partial class BarMaster : Node2D
         }
     }
 
+    public void AddNaturalRate(float addRate, BarType barType)
+    {
+        // Check if the bar exists in the dictionary and set the properties
+        if (bars.ContainsKey(barType))
+        {
+            bars[barType].SetNewRate(addRate);
+        }
+        else
+        {
+            GD.PrintErr("Bar type not found: " + barType);
+        }
+    }
+
+    public void StokeChange(float stabilityChange, float bubblinessChange)
+    {
+        bars[BarType.Stability].StokeMod = stabilityChange;
+        bars[BarType.Bubbliness].StokeMod = bubblinessChange;
+    }
+
+    public void StirChange(float bubblinessChange, float potencyChange)
+    {
+        bars[BarType.Bubbliness].StirMod = bubblinessChange;
+        bars[BarType.Potency].StirMod = potencyChange;
+    }
+
     public void SetFlatAddition(float newAddition, BarType barType)
     {
         // Check if the bar exists in the dictionary and set the properties
@@ -67,14 +92,21 @@ public partial class BarMaster : Node2D
         }
     }
 
+    public void ResetBars()
+    {
+        bars[BarType.Stability].Reset();
+        bars[BarType.Potency].Reset();
+        bars[BarType.Bubbliness].Reset();
+    }
+
     public float CalculateOverallScore()
     {
         float StabilityScore = bars[BarType.Stability].Score;
         float PotencyScore = bars[BarType.Potency].Score;
         float BubblinessScore = bars[BarType.Bubbliness].Score;
 
-        //Do something to calc overall score here..
-        float overallScore = 0;
+        //Calc Score
+        float overallScore = (StabilityScore + PotencyScore + BubblinessScore)/3;
 
         return overallScore;
 

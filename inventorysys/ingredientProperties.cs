@@ -31,8 +31,4 @@ public partial class IngredientProperties : Resource
     [Export]
     public Attributes attribute { get; set; }
 
-    //Price
-    [Export]
-    public float baseCost { get; set; }
-
 }
