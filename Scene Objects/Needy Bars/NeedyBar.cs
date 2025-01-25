@@ -167,9 +167,22 @@ public partial class NeedyBar : Control
         NaturalRate = newRate;
     }
 
+    public void AddToRate(float rateAdd)
+    {
+        NaturalRate += rateAdd;
+    }
+
     public void SetFlatAddition(float newAddition)
     {
         FlatAddition = newAddition;
+    }
+
+    public void Reset()
+    {
+        NaturalRate = 2f;
+        ActualValue = 50f;
+        Score = 0;
+        BarSpeed = 0.1f;
     }
 
     public override void _Input(InputEvent @event)

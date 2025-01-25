@@ -11,7 +11,7 @@ public partial class ShopSlot : Button
 	int money = 100; 
 	int IngredientPrice;
     int FinalPrice;
-    [Export] private ingredientProperties _ingredient;
+   //[Export] private ingredientProperties _ingredient;
     private PopupPanel _popUp;
 
     // Duration for which the message will be shown
@@ -38,10 +38,10 @@ public partial class ShopSlot : Button
             SalePercentage = x * 10;
         }
 
-        FinalPrice = _ingredient.BasePrice * (100 - SalePercentage) / 100;
+       // FinalPrice = _ingredient.BasePrice * (100 - SalePercentage) / 100;
 
-        _itemName.Text = _ingredient.Name;
-        _desc.Text = _ingredient.Description;
+        //_itemName.Text = _ingredient.Name;
+       // _desc.Text = _ingredient.Description;
 
         if(SalePercentage != 0)
         {
