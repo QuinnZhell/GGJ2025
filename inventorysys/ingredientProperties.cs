@@ -9,6 +9,24 @@ public enum Attributes {NONE, FIRE_RESISTANCE, WATER_BREATHING, FLIGHT, STRENGTH
 [GlobalClass]
 public partial class IngredientProperties : Resource
 {
+    /*
+     * Hello and welcome to my ingretient properties
+     * here you will find ingredient properties
+     * There are three Vector3s in this list
+     * Theyre the properties represented as floats, and they should be read as follows
+     * x = bubbles
+     * y = potency
+     * z = stability
+     * 
+     * base stats are the dormant, immutable stats of the ingredient. The final potion should average all of the base stats of all ingredients added to it
+     * Dynamic stats are how much the bar should move per tick. Randomise and edit at will, but ticks are fast, and small number should be used. Potion bars should change by sum of dynamic stats of all ingredients
+     * impulse stats are how much the bars change on the tick you add the ingredient to the potion. They have no lasting effect on the potion 
+     * 
+     * If you need to add more attributes, adjust 1. the enum at the top of this file, 2. the random number generator in the empty constructor class, 3. the switch case to allow the RNG to be used and your affect to be applied
+     * 
+     * 
+     */
+
     #region vars
     //base stats which effect the potions overall score
     [Export]
@@ -27,6 +45,7 @@ public partial class IngredientProperties : Resource
     public Attributes attribute { get; set; }
     #endregion
 
+    #region constructors
     public IngredientProperties (Vector3 bs, Vector3 ds, Vector3 ips, Attributes att)
     {
         baseStats = bs;
@@ -97,4 +116,30 @@ public partial class IngredientProperties : Resource
         dynamicStats = y;
         impulseStats = z;
     }
+
+    #endregion
+
+    #region accessors
+
+    public Vector3 GetBaseStats()
+    {
+        return baseStats;
+    }
+
+    public Vector3 GetDynamicStats()
+    {
+        return dynamicStats;
+    }
+
+    public Vector3 GetImpulseStats()
+    {
+        return impulseStats;
+    }
+
+    public Attributes GetAttribute()
+    {
+        return attribute;
+    }
+
+    #endregion
 }
