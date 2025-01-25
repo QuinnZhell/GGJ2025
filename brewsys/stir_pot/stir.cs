@@ -14,9 +14,9 @@ public partial class stir : Sprite2D
 	private float radiusY = 75.0f; // Y radius of the cauldron
 	private bool isStirring = false; // Track if stirring is active
 
-
 	public override void _Ready()
 	{
+		potPosition = GlobalPosition;
 	}
 
 	public override void _Process(double delta)

@@ -13,8 +13,8 @@ gradient = SubResource("Gradient_4weam")
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(205.984, -270.236)
-scale = Vector2(64, 64)
+position = Vector2(71, 237)
+scale = Vector2(1.53125, 1.4375)
 texture = SubResource("GradientTexture2D_5ybbc")
 script = ExtResource("1_qp8kn")
 
