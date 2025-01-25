@@ -8,13 +8,14 @@ public partial class stoke : Sprite2D
 	private float temperature = 0f;
 	private const float maxTemperature = 100.0f; // Maximum stove temperature
 	private const float minTemperature = 15.0f; // Minimum stove temperature
+	public float Temperature => temperature;
 
 	public override void _Ready()
 	{
 		// Get the AudioStreamPlayer node
 		audioPlayer = GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D");
 	}
-	
+
 	public override void _Process(double delta)
 	{
 		ChangeColour();
@@ -67,6 +68,6 @@ public partial class stoke : Sprite2D
 		float t = temperature / maxTemperature; // Normalize temperature to a 0-1 range
 		Modulate = new Color(1, 1 - t, 1 - t); // Change color from white to red as it heats
 
-		GD.Print("Stove is " + (isOn ? "On" : "Off") + " at " + temperature + "degrees");
+		GD.Print("Stove is " + (isOn ? "On" : "Off") + " at " + temperature + " degrees");
 	}
 }
