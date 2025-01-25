@@ -1,10 +1,12 @@
 using Godot;
 using System;
+using System.Linq;
 
 public partial class Inventory : Node
 {
-	private InvContainer[] _containerArray;
+	private Godot.Collections.Array<InvContainer> _containerArray;
 	private int _coins;
+    private int[] x;
 
 
     #region Accessor methods
@@ -15,7 +17,7 @@ public partial class Inventory : Node
     //MUST MUST MUST. Be a fully populated container as this array will be used by every system. Specify randomise if unfinished ingredient params. 
     public void Add(InvContainer container)
     {
-        _containerArray.push_back(container);
+        _containerArray.Append(container);
     }
     
     //Inv Container unpopulated, ingredient provided
