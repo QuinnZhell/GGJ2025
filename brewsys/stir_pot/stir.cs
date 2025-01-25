@@ -3,18 +3,18 @@ using System;
 
 public partial class stir : Sprite2D
 {
-	private float stirringRadius = 2f;
 	private float stirringSpeed = 0f; // Speed tracker for debugging
-	private float potRadius = 150.0f;
-	private float ladleOffset = 20.0f; // Distance from the pot's edge to the ladle's circular path
 	private float currentAngle = 0f;
 	private float previousAngle = 0.0f;
 	private Vector2 potPosition = new Vector2(549, 337); // Hard coded since I couldn't figure out how to reference the node :)
+	private Vector2 startingPositionOffset = new Vector2(10, 10); // Offset for hand to ladle
+
+	// Radius X Y of the cauldron
+	private float radiusX = 100.0f; // X radius of the cauldron
+	private float radiusY = 75.0f; // Y radius of the cauldron
 
 	public override void _Ready()
 	{
-		// Calculate the effective stirring radius
-		stirringRadius = potRadius - ladleOffset;
 	}
 
 	public override void _Process(double delta)
@@ -25,11 +25,6 @@ public partial class stir : Sprite2D
 		// Calculate angular velocity
 		float deltaAngle = Mathf.Abs(currentAngle - previousAngle);
 
-		if (deltaAngle > Mathf.Pi) // Correct for crossing the -pi to pi boundary
-		{ 
-			deltaAngle = Mathf.Tau - deltaAngle;
-		}
-
 		stirringSpeed = (float)(deltaAngle / delta); // Angular velocity in radians/second
 		previousAngle = currentAngle;
 
@@ -38,17 +33,28 @@ public partial class stir : Sprite2D
 
 	private void UpdateLadlePosition(Vector2 mousePosition)
 	{
-		// Calculate the angle between the mouse and the pot center
-		currentAngle = (mousePosition - potPosition).Angle();
 
-		Vector2 ladlePosition = potPosition + new Vector2(
-			Mathf.Cos(currentAngle) * stirringRadius,
-			Mathf.Sin(currentAngle) * stirringRadius
-		);
+		Vector2 direction = mousePosition - potPosition;
 
-		GlobalPosition = ladlePosition;
+		// If the point is outside the ellipse (i.e., outside of the normalised bounds of 1 in both x and y)
 
-		// Rotate the ladle to face toward the center
-		Rotation = currentAngle + Mathf.Pi / 2; // Add Pi/2 to make it point correctly
+		float ellipseEquation = (float)(Math.Pow(direction.X, 2) / Math.Pow(radiusX, 2) + Math.Pow(direction.Y, 2) / Math.Pow(radiusY, 2));
+
+		if (ellipseEquation > 1)
+		{
+			direction = direction.Normalized(); // Normalise the direction to ensure it's inside the ellipse
+												// Scale the direction back by the ellipse's radii
+			direction.X *= radiusX;
+			direction.Y *= radiusY;
+
+			// Set mouse position if it wonders outside the boundaries of the cauldron
+			Input.SetMouseMode(Input.MouseModeEnum.Hidden); // Hide mouse
+			Input.WarpMouse(potPosition + direction); // Move the mouse to the constrained position
+		}
+
+		currentAngle = direction.Angle();  // Get the angle from the ladle to the mouse
+
+		// Move the ladle to follow the mouse position directly
+		GlobalPosition = potPosition + direction;
 	}
 }
