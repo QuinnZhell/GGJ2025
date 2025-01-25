@@ -17,9 +17,15 @@ public partial class Request : Node2D
 		setMinScore(score);
 		setGoldReward(reward);
 	}
+    public Request(int score, int reward, Task[] tasks)
+    {
+        setMinScore(score);
+        setGoldReward(reward);
+        setTasks(tasks);
+    }
 
-	//Tweak heuristically later for balancing
-	public void setMinScore(int score)
+    //Tweak heuristically later for balancing
+    public void setMinScore(int score)
 	{
 		minScore = (minScore*BASE_VALUE_REQUIREMENT);
 	}
@@ -44,11 +50,22 @@ public partial class Request : Node2D
 	{
 		return tasks;
 	}
-	public bool complete()
-	{
-		//TODO: Check current potion score against minScore
-		return fulfilled;
-	}
+
+    public bool complete()
+    {
+        //Check if all tasks have been completed
+        foreach (Task task in getTasks())
+        {
+            if (task.completed() == false)
+            {
+                return false;
+            }
+        }
+        //Then check if default requirement (potion score) has been met
+        //TODO: Check current potion score against minScore
+        return fulfilled;
+    }
+    
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
