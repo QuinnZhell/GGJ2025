@@ -23,5 +23,6 @@ texture = SubResource("GradientTexture2D_icas5")
 script = ExtResource("1_pooib")
 
 [node name="pot" type="Sprite2D" parent="."]
+position = Vector2(200, 200)
 scale = Vector2(0.5, 0.484375)
 texture = SubResource("GradientTexture2D_nnbsg")
