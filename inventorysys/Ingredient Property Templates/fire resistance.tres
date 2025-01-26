@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientProperties" load_steps=2 format=3 uid="uid://b72457nscquee"]
+
+[ext_resource type="Script" path="res://inventorysys/IngredientProperties.cs" id="1_vbiwu"]
+
+[resource]
+script = ExtResource("1_vbiwu")
+baseStats = Vector3(0, 0, 0)
+dynamicStats = Vector3(0, 0, 0)
+impulseStats = Vector3(0, 0, 0)
+attribute = 1
