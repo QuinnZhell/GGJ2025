@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cminidi73a0fx"]
+[gd_scene load_steps=9 format=3 uid="uid://cminidi73a0fx"]
 
 [ext_resource type="Script" path="res://scenes/Cauldron.cs" id="1_d2nt6"]
 [ext_resource type="PackedScene" uid="uid://bfd6lsfpud8d5" path="res://Scene Objects/Potion.tscn" id="1_x2eak"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cnrrwr5rydbft" path="res://brewsys/spit/AltSpit.tscn" id="5_du6sl"]
 [ext_resource type="Texture2D" uid="uid://c07rw0ja3p3yc" path="res://GGJ2025ArtAssets/PNG Exports/dungeon.png" id="6_iqmfh"]
 [ext_resource type="Texture2D" uid="uid://b7gr2skmfafir" path="res://GGJ2025ArtAssets/PNG Exports/Cauldron.png" id="7_j88tv"]
+[ext_resource type="Texture2D" uid="uid://18thngyv5jvh" path="res://GGJ2025ArtAssets/PNG Exports/witch.png" id="8_juk63"]
 
 [node name="Brewing" type="Node2D"]
 script = ExtResource("1_d2nt6")
@@ -30,7 +31,14 @@ scale = Vector2(4.0125, 3.99167)
 texture = ExtResource("6_iqmfh")
 
 [node name="Cauldron" type="Sprite2D" parent="."]
+visible = false
 z_index = -4
 position = Vector2(662, 558)
 scale = Vector2(1.82268, 1.67277)
 texture = ExtResource("7_j88tv")
+
+[node name="Witch" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(642.75, 383)
+scale = Vector2(1.73625, 1.6425)
+texture = ExtResource("8_juk63")
