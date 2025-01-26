@@ -11,9 +11,12 @@ public partial class ShopSlot : Button
     //Temp int for cash till we get inv, change to reference to players current cash
 	int IngredientPrice;
     int FinalPrice;
-    //[Export] private Ingredient _ingredient;
     private PopupPanel _popUp;
     private AudioStreamPlayer2D sfx;
+    private RichTextLabel _itemName;
+    private RichTextLabel _price;
+    private RichTextLabel _desc;
+    [Export] public int baseCost;
     GoldDisplay display;
 
     // Duration for which the message will be shown
@@ -21,9 +24,10 @@ public partial class ShopSlot : Button
 
     public override void _Ready()
     {
+
         _popUp = GetNode<PopupPanel>("ItemInfo");
         Control _control = _popUp.GetNode<Control>("Control");
-        RichTextLabel _itemName = _control.GetNode<RichTextLabel>("Item Name");
+        _itemName = _control.GetNode<RichTextLabel>("Item Name");
         RichTextLabel _price = _control.GetNode<RichTextLabel>("Price");
         RichTextLabel _desc = _control.GetNode<RichTextLabel>("Desc");
         display = GetParent().GetNode<GoldDisplay>("Gold");
@@ -39,13 +43,9 @@ public partial class ShopSlot : Button
             SalePercentage = x * 10;
         }
 
-        // FinalPrice = _ingredient.baseCost * (100 - SalePercentage) / 100;
-        FinalPrice = 20;
+        FinalPrice = baseCost * (100 - SalePercentage) / 100;
 
-        //_itemName.Text = _ingredient.name;
-       // _desc.Text = _ingredient.description;
-
-        if(SalePercentage != 0)
+        if (SalePercentage != 0)
         {
             _price.BbcodeEnabled = true;
             _price.Text = "Cost: " + "[color=#FFD700]" + FinalPrice.ToString() + "[/color]";
@@ -123,6 +123,16 @@ public partial class ShopSlot : Button
         await ToSignal(GetTree().CreateTimer(messageDuration), "timeout");
 
         messageLabel.QueueFree();
+    }
+
+    public void UpdateName(string name)
+    {
+        _itemName.Text = name;
+    }
+
+    public void UpdateDesc(string desc)
+    {
+        _desc.Text = desc;
     }
 
 }

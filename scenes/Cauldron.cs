@@ -24,7 +24,7 @@ public partial class Cauldron : Node2D
         barMaster.StirChange(stir.StirringSpeed / 2);
 		if (spit.spitting)
 		{
-            barMaster.SpitChange(4);
+            barMaster.SpitChange(32);
         }
 		else
 		{

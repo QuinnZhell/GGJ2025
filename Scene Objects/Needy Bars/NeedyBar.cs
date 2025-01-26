@@ -127,7 +127,7 @@ public partial class NeedyBar : Control
         // Color based on proximity to goal
         if (distance < GoalLenience * 0.5f)
         {
-            Score += 3 * (float)GetProcessDeltaTime(); // Double score for gold area
+            Score += 1 * (float)GetProcessDeltaTime(); // Double score for gold area
         }
         else if (distance > GoalLenience)
         {

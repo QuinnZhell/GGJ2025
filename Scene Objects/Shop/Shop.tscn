@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://c538sgb52accb"]
+[gd_scene load_steps=21 format=3 uid="uid://c538sgb52accb"]
 
+[ext_resource type="Script" path="res://Scene Objects/Shop/ShopMaster.cs" id="1_f1dfq"]
 [ext_resource type="PackedScene" uid="uid://bbq7atirofrct" path="res://Scene Objects/Shop/ShopSlot.tscn" id="1_l38yv"]
 [ext_resource type="Texture2D" uid="uid://cou2svbi0imnt" path="res://assets/Sprites/gold_coin.png" id="2_mkqy8"]
 [ext_resource type="Script" path="res://Scene Objects/Shop/GoldDisplay.cs" id="2_wubaq"]
@@ -8,16 +9,24 @@
 [ext_resource type="Texture2D" uid="uid://cweajcxvhbipr" path="res://GGJ2025ArtAssets/PNG Exports/wider shelf.png" id="5_8gpv6"]
 [ext_resource type="Texture2D" uid="uid://b2mimj164ct6i" path="res://GGJ2025ArtAssets/PNG Exports/MysticBox.png" id="5_fyhe7"]
 [ext_resource type="Script" path="res://Scene Objects/Shop/SceneChange.cs" id="6_6yk8o"]
-[ext_resource type="Texture2D" uid="uid://baq7lycdt6aex" path="res://GGJ2025ArtAssets/PNG Exports/Rockmoss.png" id="6_iiywq"]
+[ext_resource type="Texture2D" uid="uid://da1g5n3yxmw7k" path="res://GGJ2025ArtAssets/PNG Exports/Rockmoss.png" id="6_iiywq"]
+[ext_resource type="Texture2D" uid="uid://iot0buq3o787" path="res://GGJ2025ArtAssets/PNG Exports/Sparkthistle.png" id="7_emj6g"]
 [ext_resource type="AudioStream" uid="uid://creusmdbhcpk0" path="res://GGJ2025ArtAssets/SFX/Click.wav" id="8_ra7g2"]
+[ext_resource type="Texture2D" uid="uid://nnhqlbklp7v8" path="res://GGJ2025ArtAssets/PNG Exports/Newt Eye.png" id="8_wxlje"]
 [ext_resource type="Script" path="res://Scene Objects/Shop/ScrollRequest.cs" id="9_2qu2r"]
+[ext_resource type="Texture2D" uid="uid://b7yd2dhr0ke53" path="res://GGJ2025ArtAssets/PNG Exports/OchreJelly.png" id="9_sb73g"]
 [ext_resource type="Texture2D" uid="uid://c07rw0ja3p3yc" path="res://GGJ2025ArtAssets/PNG Exports/dungeon.png" id="10_cma28"]
+[ext_resource type="Texture2D" uid="uid://c7wnyonv6nsn7" path="res://GGJ2025ArtAssets/PNG Exports/Saxifrage.png" id="11_3qqld"]
+[ext_resource type="Texture2D" uid="uid://cqjsu3itbwx5t" path="res://GGJ2025ArtAssets/PNG Exports/Waterleaf.png" id="12_ldts0"]
+[ext_resource type="Texture2D" uid="uid://dlgcbfu0e84op" path="res://GGJ2025ArtAssets/PNG Exports/ManticoreFeather.png" id="13_iyme5"]
+[ext_resource type="Texture2D" uid="uid://b2vktsl0hy7l3" path="res://GGJ2025ArtAssets/PNG Exports/MysteriousLiquid.png" id="14_6a1rd"]
 
 [node name="ShopMaster" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_top = 142.0
 offset_bottom = 142.0
+script = ExtResource("1_f1dfq")
 
 [node name="Gold" type="RichTextLabel" parent="."]
 clip_contents = false
@@ -42,101 +51,199 @@ scale = Vector2(0.5, 0.562)
 texture = ExtResource("2_mkqy8")
 metadata/_edit_lock_ = true
 
-[node name="ShopSlot" parent="." instance=ExtResource("1_l38yv")]
+[node name="Mystic Box" parent="." instance=ExtResource("1_l38yv")]
 z_index = 1
 layout_mode = 0
 offset_left = 135.0
 offset_top = 108.0
 offset_right = 335.0
 offset_bottom = 308.0
+baseCost = 15
 
-[node name="Item Name" parent="ShopSlot/ItemInfo/Control" index="0"]
+[node name="Item Name" parent="Mystic Box/ItemInfo/Control" index="0"]
 text = "Mystic Box"
 
-[node name="Desc" parent="ShopSlot/ItemInfo/Control" index="2"]
+[node name="Desc" parent="Mystic Box/ItemInfo/Control" index="2"]
 text = "\"I keep losing track of it!\""
 
-[node name="Icon" parent="ShopSlot" index="1"]
+[node name="Icon" parent="Mystic Box" index="1"]
 texture = ExtResource("5_fyhe7")
 metadata/_edit_lock_ = true
 
-[node name="ShopSlot2" parent="." instance=ExtResource("1_l38yv")]
+[node name="Sparkthistle" parent="." instance=ExtResource("1_l38yv")]
 z_index = 1
 layout_mode = 0
 offset_left = 246.0
 offset_top = 108.0
 offset_right = 446.0
 offset_bottom = 308.0
+baseCost = 30
 
-[node name="ShopSlot3" parent="." instance=ExtResource("1_l38yv")]
+[node name="Item Name" parent="Sparkthistle/ItemInfo/Control" index="0"]
+text = "Sparkthistle"
+
+[node name="Desc" parent="Sparkthistle/ItemInfo/Control" index="2"]
+text = "Shock the tastebuds!"
+
+[node name="Icon" parent="Sparkthistle" index="1"]
+position = Vector2(94, 82)
+scale = Vector2(0.619424, 1.49125)
+texture = ExtResource("7_emj6g")
+metadata/_edit_lock_ = true
+
+[node name="Newt Eye" parent="." instance=ExtResource("1_l38yv")]
 z_index = 1
 layout_mode = 0
 offset_left = 358.0
-offset_top = 81.0
+offset_top = 104.0
 offset_right = 558.0
-offset_bottom = 281.0
+offset_bottom = 304.0
+baseCost = 45
 
-[node name="ShopSlot4" parent="." instance=ExtResource("1_l38yv")]
+[node name="Item Name" parent="Newt Eye/ItemInfo/Control" index="0"]
+text = "Newt Eye
+"
+
+[node name="Price" parent="Newt Eye/ItemInfo/Control" index="1"]
+text = "Cost: "
+
+[node name="Desc" parent="Newt Eye/ItemInfo/Control" index="2"]
+text = "I don't think he's coming back."
+
+[node name="Icon" parent="Newt Eye" index="1"]
+position = Vector2(110, 94)
+scale = Vector2(1.18714, 1.85556)
+texture = ExtResource("8_wxlje")
+metadata/_edit_lock_ = true
+
+[node name="Ochre Jelly" parent="." instance=ExtResource("1_l38yv")]
 z_index = 1
 layout_mode = 0
 offset_left = 477.0
-offset_top = 82.0
+offset_top = 104.0
 offset_right = 677.0
-offset_bottom = 282.0
+offset_bottom = 304.0
+baseCost = 10
 
-[node name="ShopSlot5" parent="." instance=ExtResource("1_l38yv")]
+[node name="Item Name" parent="Ochre Jelly/ItemInfo/Control" index="0"]
+text = "Ochre Jelly
+"
+
+[node name="Desc" parent="Ochre Jelly/ItemInfo/Control" index="2"]
+text = "Smelly jelly: In my belly!"
+
+[node name="Icon" parent="Ochre Jelly" index="1"]
+position = Vector2(136, 84)
+scale = Vector2(0.890977, 1.76355)
+texture = ExtResource("9_sb73g")
+metadata/_edit_lock_ = true
+
+[node name="Rock Moss" parent="." instance=ExtResource("1_l38yv")]
 z_index = 1
 layout_mode = 0
 offset_left = 600.0
 offset_top = -41.0
 offset_right = 800.0
 offset_bottom = 145.0
+baseCost = 10
 
-[node name="Item Name" parent="ShopSlot5/ItemInfo/Control" index="0"]
+[node name="Item Name" parent="Rock Moss/ItemInfo/Control" index="0"]
 text = "Rock Moss"
 
-[node name="Price" parent="ShopSlot5/ItemInfo/Control" index="1"]
+[node name="Price" parent="Rock Moss/ItemInfo/Control" index="1"]
 text = "Cost: 15"
 
-[node name="Desc" parent="ShopSlot5/ItemInfo/Control" index="2"]
+[node name="Desc" parent="Rock Moss/ItemInfo/Control" index="2"]
 text = "Some moss from a deep cavern, stinks!"
 
-[node name="Icon" parent="ShopSlot5" index="1"]
+[node name="Icon" parent="Rock Moss" index="1"]
 position = Vector2(82.9374, 102.379)
 scale = Vector2(0.678623, 1.39412)
 texture = ExtResource("6_iiywq")
+metadata/_edit_lock_ = true
 
-[node name="ShopSlot6" parent="." instance=ExtResource("1_l38yv")]
+[node name="Saxifrage" parent="." instance=ExtResource("1_l38yv")]
 z_index = 1
 layout_mode = 0
 offset_left = 250.0
 offset_top = 277.0
 offset_right = 450.0
 offset_bottom = 477.0
+baseCost = 25
 
-[node name="ShopSlot7" parent="." instance=ExtResource("1_l38yv")]
+[node name="Item Name" parent="Saxifrage/ItemInfo/Control" index="0"]
+text = "Saxifrage
+"
+
+[node name="Desc" parent="Saxifrage/ItemInfo/Control" index="2"]
+text = "Close relative of the tromboniflower."
+
+[node name="Icon" parent="Saxifrage" index="1"]
+position = Vector2(100.75, 96.451)
+scale = Vector2(0.852804, 0.996583)
+texture = ExtResource("11_3qqld")
+
+[node name="WaterLeaf" parent="." instance=ExtResource("1_l38yv")]
 z_index = 1
 layout_mode = 0
 offset_left = 358.0
 offset_top = 277.0
 offset_right = 558.0
 offset_bottom = 477.0
+baseCost = 10
 
-[node name="ShopSlot8" parent="." instance=ExtResource("1_l38yv")]
+[node name="Item Name" parent="WaterLeaf/ItemInfo/Control" index="0"]
+text = "Waterleaf
+"
+
+[node name="Desc" parent="WaterLeaf/ItemInfo/Control" index="2"]
+text = "I hardly know leaf!"
+
+[node name="Icon" parent="WaterLeaf" index="1"]
+position = Vector2(88, 92)
+scale = Vector2(0.647683, 0.792382)
+texture = ExtResource("12_ldts0")
+
+[node name="Manticore Feather" parent="." instance=ExtResource("1_l38yv")]
 z_index = 1
 layout_mode = 0
 offset_left = 459.0
 offset_top = 277.0
 offset_right = 659.0
 offset_bottom = 477.0
+baseCost = 50
 
-[node name="ShopSlot9" parent="." instance=ExtResource("1_l38yv")]
+[node name="Item Name" parent="Manticore Feather/ItemInfo/Control" index="0"]
+text = "Manticore Feather"
+
+[node name="Desc" parent="Manticore Feather/ItemInfo/Control" index="2"]
+text = "Sometimes a few eggs must be broken to make an omelette. R.I.P. Glimbo."
+
+[node name="Icon" parent="Manticore Feather" index="1"]
+position = Vector2(132, 56)
+scale = Vector2(0.63, 0.7615)
+texture = ExtResource("13_iyme5")
+
+[node name="Mysterious Liquid" parent="." instance=ExtResource("1_l38yv")]
 z_index = 1
 layout_mode = 0
 offset_left = 558.0
 offset_top = 277.0
 offset_right = 758.0
 offset_bottom = 477.0
+baseCost = 20
+
+[node name="Item Name" parent="Mysterious Liquid/ItemInfo/Control" index="0"]
+text = "Mysterious Liquid
+"
+
+[node name="Desc" parent="Mysterious Liquid/ItemInfo/Control" index="2"]
+text = "Brewed from iron with no extra additives"
+
+[node name="Icon" parent="Mysterious Liquid" index="1"]
+position = Vector2(118, 104)
+scale = Vector2(1.60433, 2.77575)
+texture = ExtResource("14_6a1rd")
 
 [node name="BG Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_ghfmv")
@@ -196,5 +303,12 @@ metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/continue" to="MarginContainer" method="_on_continue_pressed"]
 
-[editable path="ShopSlot"]
-[editable path="ShopSlot5"]
+[editable path="Mystic Box"]
+[editable path="Sparkthistle"]
+[editable path="Newt Eye"]
+[editable path="Ochre Jelly"]
+[editable path="Rock Moss"]
+[editable path="Saxifrage"]
+[editable path="WaterLeaf"]
+[editable path="Manticore Feather"]
+[editable path="Mysterious Liquid"]

@@ -11,9 +11,9 @@ public partial class ScrollRequest : Control
         currentTextContainer = GetNode<VBoxContainer>("VBoxContainer");
 
         // Add multiple text objects
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < GameMaster.requests.Count; i++)
         {
-            AddTextToBox($"Message {i + 1}");
+            AddTextToBox($"Request {i}");
         }
     }
 

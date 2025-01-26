@@ -13,6 +13,6 @@ public partial class SceneChange : MarginContainer
     private void _on_continue_pressed()
     {
         sfx.Play();
-        GetTree().ChangeSceneToFile("res://game.tscn");
+        GetTree().ChangeSceneToFile("res://scenes/brewing.tscn");
     }
 }
