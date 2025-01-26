@@ -6,7 +6,7 @@ public partial class Spit : Node2D
 {
 	private Timer qteTimer;
 	private bool qteStarted = false;
-	private bool qteSuccess = false;
+	public bool qteSuccess = false;
 
 	// Time limit for the quick time event (in seconds)
 	private float qteTimeLimit = 2.0f;
@@ -17,7 +17,7 @@ public partial class Spit : Node2D
 	{
 		// Create and configure the timer
 		qteTimer = new Timer();
-		qteTimer.WaitTime = qteTimeLimit;
+		qteTimer.WaitTime = qteTimeLimit;          
 		qteTimer.OneShot = true;
 		qteTimer.Connect("timeout", Callable.From(OnQteTimeout));
 		AddChild(qteTimer);

@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://bqgh67caetyrk"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://puljm4shpdp5"]
 
 [ext_resource type="Script" path="res://inventorysys/Ingredient.cs" id="1_f3q8k"]
-[ext_resource type="Resource" uid="uid://uqj5i6osh6lm" path="res://inventorysys/Ingredient Property Templates/water breathing.tres" id="1_qw3sy"]
+[ext_resource type="Resource" path="res://inventorysys/Ingredient Property Templates/water breathing.tres" id="1_qw3sy"]
 
 [resource]
 script = ExtResource("1_f3q8k")

@@ -30,7 +30,7 @@ public partial class stir : Sprite2D
 		_stirringSpeed = (float)(deltaAngle / delta); // Angular velocity in radians/second
 		previousAngle = currentAngle;
 
-		GD.Print(_stirringSpeed);
+		//GD.Print(_stirringSpeed);
 	}
 
 	private void UpdateLadlePosition(Vector2 mousePosition)

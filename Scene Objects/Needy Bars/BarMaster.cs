@@ -67,16 +67,19 @@ public partial class BarMaster : Node2D
         }
     }
 
-    public void StokeChange(float stabilityChange, float bubblinessChange)
+    public void StokeChange(float bubblinessChange)
     {
-        bars[BarType.Stability].StokeMod = stabilityChange;
         bars[BarType.Bubbliness].StokeMod = bubblinessChange;
     }
 
-    public void StirChange(float bubblinessChange, float potencyChange)
+    public void StirChange(float stabilityChange)
     {
-        bars[BarType.Bubbliness].StirMod = bubblinessChange;
-        bars[BarType.Potency].StirMod = potencyChange;
+        bars[BarType.Stability].StirMod = stabilityChange;
+    }
+
+    public void SpitChange(float potencyChange)
+    {
+        bars[BarType.Potency].SpitMod = potencyChange;
     }
 
     public void SetFlatAddition(float newAddition, BarType barType)

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnrrwr5rydbft"]
+
+[ext_resource type="Script" path="res://brewsys/spit/AltSpit.cs" id="1_rsjq0"]
+
+[node name="AltSpit" type="Node2D"]
+script = ExtResource("1_rsjq0")
