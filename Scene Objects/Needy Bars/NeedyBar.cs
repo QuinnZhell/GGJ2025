@@ -15,7 +15,7 @@ public partial class NeedyBar : Control
     private float MinValue = 0f;
     private float MaxValue = 100f;
     public float Score = 100f;
-
+    public bool failing = false;
     public float StokeMod = 0f;
     public float StirMod = 0f;
     public float SpitMod = 0f;
@@ -128,10 +128,16 @@ public partial class NeedyBar : Control
         if (distance < GoalLenience * 0.5f)
         {
             Score += 1 * (float)GetProcessDeltaTime(); // Double score for gold area
+            failing = false;
         }
         else if (distance > GoalLenience)
         {
             Score -= 3 * (float)GetProcessDeltaTime(); // Regular score for light green area
+            failing = true;
+        }
+        else
+        {
+            failing = false;
         }
 
     }

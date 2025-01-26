@@ -7,6 +7,7 @@ public partial class Potion : Node2D
 	RichTextLabel score;
 	Timer timer;
 	public bool failure = false;
+	public bool failing = false;
 
 	public Godot.Collections.Array<Ingredient> _ingredientArray;
 
@@ -40,6 +41,8 @@ public partial class Potion : Node2D
 		{
 			score.Text = barMaster.CalculateOverallScore().ToString();
 		}
+
+		failing = barMaster.CheckFailing();
 	}
 
 	private void AddIngredient(Ingredient ing)

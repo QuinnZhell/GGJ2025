@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cminidi73a0fx"]
+[gd_scene load_steps=11 format=3 uid="uid://cminidi73a0fx"]
 
 [ext_resource type="Script" path="res://scenes/Cauldron.cs" id="1_d2nt6"]
 [ext_resource type="PackedScene" uid="uid://bfd6lsfpud8d5" path="res://Scene Objects/Potion.tscn" id="1_x2eak"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cnrrwr5rydbft" path="res://brewsys/spit/AltSpit.tscn" id="5_du6sl"]
 [ext_resource type="Texture2D" uid="uid://c07rw0ja3p3yc" path="res://GGJ2025ArtAssets/PNG Exports/dungeon.png" id="6_iqmfh"]
 [ext_resource type="Texture2D" uid="uid://b7gr2skmfafir" path="res://GGJ2025ArtAssets/PNG Exports/Cauldron.png" id="7_j88tv"]
+[ext_resource type="Texture2D" uid="uid://bvcixpolqej5p" path="res://GGJ2025ArtAssets/PNG Exports/bubbleface.png" id="8_488ht"]
+[ext_resource type="Script" path="res://scenes/SpriteGrow.cs" id="9_eec6s"]
+[ext_resource type="AudioStream" uid="uid://cj28gx7xlolxj" path="res://GGJ2025ArtAssets/SFX/reugh.wav" id="10_l6yyx"]
 
 [node name="Brewing" type="Node2D"]
 script = ExtResource("1_d2nt6")
@@ -34,3 +37,17 @@ z_index = -4
 position = Vector2(662, 558)
 scale = Vector2(1.82268, 1.67277)
 texture = ExtResource("7_j88tv")
+
+[node name="Evil" type="Sprite2D" parent="."]
+position = Vector2(652.5, 275.875)
+scale = Vector2(0.0924999, 0.105625)
+texture = ExtResource("8_488ht")
+script = ExtResource("9_eec6s")
+
+[node name="audio" type="AudioStreamPlayer2D" parent="Evil"]
+stream = ExtResource("10_l6yyx")
+
+[node name="Timer" type="Timer" parent="Evil"]
+wait_time = 3.0
+
+[connection signal="timeout" from="Evil/Timer" to="Evil" method="_on_timer_timeout"]

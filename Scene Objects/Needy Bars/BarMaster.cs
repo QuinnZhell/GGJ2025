@@ -124,4 +124,14 @@ public partial class BarMaster : Node2D
 
         return false;
     }
+
+    public bool CheckFailing()
+    {
+        if (bars[BarType.Stability].failing == true || bars[BarType.Potency].failing == true || bars[BarType.Bubbliness].failing == true)
+        {
+            return true;
+        }
+
+        return false;
+    }
 }
