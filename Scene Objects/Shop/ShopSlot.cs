@@ -5,13 +5,14 @@ using System.Drawing;
 public partial class ShopSlot : Button
 {
 
-	//Get reference to players inv here..
+    //Get reference to players inv here
+    public Inventory inv;
 
-	//Temp int for cash till we get inv, change to reference to players current cash
-	int money = 100; 
+    //Temp int for cash till we get inv, change to reference to players current cash
+    int money;
 	int IngredientPrice;
     int FinalPrice;
-   //[Export] private ingredientProperties _ingredient;
+    [Export] private Ingredient _ingredient;
     private PopupPanel _popUp;
 
     // Duration for which the message will be shown
@@ -22,6 +23,7 @@ public partial class ShopSlot : Button
 
     public override void _Ready()
     {
+        money = inv.GetCoins();
         _popUp = GetNode<PopupPanel>("ItemInfo");
         Control _control = _popUp.GetNode<Control>("Control");
         RichTextLabel _itemName = _control.GetNode<RichTextLabel>("Item Name");
@@ -38,10 +40,10 @@ public partial class ShopSlot : Button
             SalePercentage = x * 10;
         }
 
-       // FinalPrice = _ingredient.BasePrice * (100 - SalePercentage) / 100;
+        FinalPrice = _ingredient.baseCost * (100 - SalePercentage) / 100;
 
-        //_itemName.Text = _ingredient.Name;
-       // _desc.Text = _ingredient.Description;
+        _itemName.Text = _ingredient.name;
+        _desc.Text = _ingredient.description;
 
         if(SalePercentage != 0)
         {

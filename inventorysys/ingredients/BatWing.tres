@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ingredientProperties" load_steps=2 format=3 uid="uid://dr32hg50lrs0d"]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dr32hg50lrs0d"]
 
 [ext_resource type="Script" path="res://inventorysys/ingredientProperties.cs" id="1_arye0"]
 
