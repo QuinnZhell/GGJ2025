@@ -1,22 +1,28 @@
 using Godot;
 using System;
 
-public partial class stir : Sprite2D
+public partial class stir : Node2D
 {
 	private float _stirringSpeed = 0f; // Speed tracker for debugging
 	public float StirringSpeed => _stirringSpeed;
 	private float currentAngle = 0f;
 	private float previousAngle = 0.0f;
-	private Vector2 potPosition = new Vector2(200, 200); // Hard coded since I couldn't figure out how to reference the node :)
+
+	public Sprite2D cauldron;
+	private Vector2 potPosition = new Vector2(662, 558); // Hard coded since I couldn't figure out how to reference the node :)
+
 	private Vector2 startingPositionOffset = new Vector2(10, 10); // Offset for hand to ladle
 
 	// Radius X Y of the cauldron
-	private float radiusX = 100.0f; // X radius of the cauldron
-	private float radiusY = 75.0f; // Y radius of the cauldron
+	private float radiusX = 200.0f; // X radius of the cauldron
+	private float radiusY = 90.0f; // Y radius of the cauldron
 	private bool isStirring = false; // Track if stirring is active
 
 	public override void _Ready()
 	{
+		cauldron = GetNode<Sprite2D>("Cauldron");
+		GD.Print(cauldron.Position);
+		potPosition = cauldron.Position;
 	}
 
 	public override void _Process(double delta)
