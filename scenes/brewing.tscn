@@ -12,8 +12,12 @@
 script = ExtResource("1_d2nt6")
 
 [node name="Potion" parent="." instance=ExtResource("1_x2eak")]
+z_index = 5
+position = Vector2(550, 500)
 
 [node name="Stoke Flames" parent="." instance=ExtResource("2_2e3fn")]
+position = Vector2(500, 450)
+scale = Vector2(3, 3)
 
 [node name="Stir Pot" parent="." instance=ExtResource("3_ek0c0")]
 

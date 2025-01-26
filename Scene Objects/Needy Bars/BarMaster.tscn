@@ -7,7 +7,7 @@
 script = ExtResource("1_b2jlq")
 
 [node name="Stability" parent="." instance=ExtResource("1_vowf2")]
-NaturalRate = -4.0
+NaturalRate = -2.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Potency" parent="." instance=ExtResource("1_vowf2")]

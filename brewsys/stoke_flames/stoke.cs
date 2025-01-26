@@ -47,7 +47,8 @@ public partial class stoke : Sprite2D
 			// Stop the sound
 			if (audioPlayer.Playing)
 			{
-				audioPlayer.Stop();
+                audioPlayer.Stream = GD.Load<AudioStream>("res://GGJ2025ArtAssets/SFX/Simmer.mp3");
+                audioPlayer.Play();
 			}
 		}
 		else
@@ -56,8 +57,9 @@ public partial class stoke : Sprite2D
 			// Play the sound
 			if (!audioPlayer.Playing)
 			{
-				audioPlayer.Play(0);
-			}
+                audioPlayer.Stream = GD.Load<AudioStream>("res://GGJ2025ArtAssets/SFX/boiling.mp3");
+                audioPlayer.Play();
+            }
 		}
 
 	}
