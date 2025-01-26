@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://18yircj4r403"]
+[gd_scene load_steps=8 format=3 uid="uid://cminidi73a0fx"]
 
 [ext_resource type="Script" path="res://scenes/Cauldron.cs" id="1_d2nt6"]
-[ext_resource type="PackedScene" path="res://Scene Objects/Potion.tscn" id="1_x2eak"]
+[ext_resource type="PackedScene" uid="uid://bfd6lsfpud8d5" path="res://Scene Objects/Potion.tscn" id="1_x2eak"]
+[ext_resource type="PackedScene" uid="uid://c6v36by04u1t6" path="res://brewsys/stoke_flames/stoke_flames.tscn" id="2_2e3fn"]
 [ext_resource type="PackedScene" uid="uid://8cghtbg25inj" path="res://brewsys/stir_pot/stir.tscn" id="3_ek0c0"]
-[ext_resource type="Script" path="res://brewsys/stir_pot/stir.cs" id="4_fhxjy"]
-[ext_resource type="PackedScene" path="res://brewsys/spit/AltSpit.tscn" id="5_du6sl"]
+[ext_resource type="PackedScene" uid="uid://cnrrwr5rydbft" path="res://brewsys/spit/AltSpit.tscn" id="5_du6sl"]
 [ext_resource type="Texture2D" uid="uid://c07rw0ja3p3yc" path="res://GGJ2025ArtAssets/PNG Exports/dungeon.png" id="6_iqmfh"]
 [ext_resource type="Texture2D" uid="uid://b7gr2skmfafir" path="res://GGJ2025ArtAssets/PNG Exports/Cauldron.png" id="7_j88tv"]
 
@@ -15,22 +15,11 @@ script = ExtResource("1_d2nt6")
 z_index = 5
 position = Vector2(550, 500)
 
-[node name="Stoke Flames" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
+[node name="Stoke Flames" parent="." instance=ExtResource("2_2e3fn")]
 position = Vector2(500, 450)
 scale = Vector2(3, 3)
-script = null
 
 [node name="Stir Pot" parent="." instance=ExtResource("3_ek0c0")]
-script = ExtResource("4_fhxjy")
 
 [node name="AltSpit" parent="." instance=ExtResource("5_du6sl")]
 
