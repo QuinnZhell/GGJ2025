@@ -1,4 +1,6 @@
 using Godot;
+using System;
+using System.Drawing;
 
 public partial class SpriteGrow : Node2D
 {
@@ -39,6 +41,7 @@ public partial class SpriteGrow : Node2D
     private void TriggerFunction()
     {
         audio.Play();
+        Modulate = new Godot.Color(0.5f, 0.5f, 0.5f); // Gray color
         if (!timerStarted)
         {
             timer.Start();
