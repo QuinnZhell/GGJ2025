@@ -46,6 +46,7 @@ public partial class IngredientProperties : Resource
    
 
     #region constructors
+    //defining all traits
     public IngredientProperties (Vector3 bs, Vector3 ds, Vector3 ips, Attributes att)
     {
         baseStats = bs;
@@ -116,6 +117,7 @@ public partial class IngredientProperties : Resource
     //Randomise all, but set a known attribute
     public IngredientProperties (Attributes x)
     {
+        //init rng for attribute only definition
         var random = new RandomNumberGenerator();
         random.Randomize();
 
