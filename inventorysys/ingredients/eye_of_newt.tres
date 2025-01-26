@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=2 format=3 uid="uid://b3dyfocgx1lxh"]
+
+[ext_resource type="Script" path="res://inventorysys/Ingredient.cs" id="1_lftle"]
+
+[resource]
+script = ExtResource("1_lftle")
+name = "Eye of Newt"
+description = "He's probably not getting better."
+baseCost = 1
+useCooldown = false
+useMultiplicative = false
+onCooldown = false
+cdTime = 0.0

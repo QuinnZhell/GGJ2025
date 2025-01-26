@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=2 format=3 uid="uid://duqpuypfx8wi2"]
+
+[ext_resource type="Script" path="res://inventorysys/Ingredient.cs" id="1_q2vck"]
+
+[resource]
+script = ExtResource("1_q2vck")
+name = "Manticore Feather"
+description = "Sometimes a few eggs must be broken to make an omelette. R.I.P. Glimbo."
+baseCost = 10
+useCooldown = false
+useMultiplicative = false
+onCooldown = false
+cdTime = 0.0

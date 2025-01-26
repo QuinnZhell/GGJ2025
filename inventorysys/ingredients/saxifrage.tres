@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=2 format=3 uid="uid://dwd4side1v50d"]
+
+[ext_resource type="Script" path="res://inventorysys/Ingredient.cs" id="1_85j0l"]
+
+[resource]
+script = ExtResource("1_85j0l")
+name = "Saxifrage"
+description = "Close relative of the tromboniflower."
+baseCost = 1
+useCooldown = false
+useMultiplicative = false
+onCooldown = false
+cdTime = 0.0
