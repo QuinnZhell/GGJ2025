@@ -52,6 +52,19 @@ public partial class Ingredient : Resource
         _cdTimer = cdt;
     }
 
+    //Rand properties, select attribute. Clone of above buit wiwth attribute passed in
+    public Ingredient(string n, string d, int bc, Attributes att, bool uc, bool um, bool oc, float cd, float cdt)
+    {
+        name = n;
+        description = d;
+        baseCost = bc;
+        properties = new IngredientProperties(att);
+        useCooldown = uc;
+        useMultiplicative = um;
+        onCooldown = oc;
+        cdTime = cd;
+        _cdTimer = cdt;
+    }
 
 
     public float GetCDTimer()

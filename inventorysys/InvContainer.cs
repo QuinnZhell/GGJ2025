@@ -9,12 +9,21 @@ public partial class InvContainer : Node
     private bool _empty;
     
 
-
+    //Full constructor
     public InvContainer(string name, int quantity, Ingredient ingredient, bool empty)
     {
         _name = name;
         _quantity = quantity;
         _ingredient = ingredient;
+        _empty = empty;
+    }
+
+    //Construct all from primative, define ingredient property attribute, randomise other properties
+    public InvContainer(string name, int quantity, string n, string d, int bc, Attributes att, bool uc, bool um, bool oc, float cd, float cdt, bool empty)
+    {
+        _name = name;
+        _quantity = quantity;
+        _ingredient = new Ingredient(n, d, bc, att, uc, um, oc, cd, cdt);
         _empty = empty;
     }
 
