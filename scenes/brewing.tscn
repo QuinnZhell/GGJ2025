@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://cminidi73a0fx"]
+
+[ext_resource type="Script" path="res://scenes/Cauldron.cs" id="1_d2nt6"]
+[ext_resource type="PackedScene" uid="uid://bfd6lsfpud8d5" path="res://Scene Objects/Potion.tscn" id="1_x2eak"]
+[ext_resource type="PackedScene" uid="uid://c6v36by04u1t6" path="res://brewsys/stoke_flames/stoke_flames.tscn" id="2_2e3fn"]
+[ext_resource type="PackedScene" uid="uid://8cghtbg25inj" path="res://brewsys/stir_pot/stir.tscn" id="3_ek0c0"]
+[ext_resource type="PackedScene" uid="uid://cnrrwr5rydbft" path="res://brewsys/spit/AltSpit.tscn" id="5_du6sl"]
+
+[node name="Brewing" type="Node2D"]
+script = ExtResource("1_d2nt6")
+
+[node name="Potion" parent="." instance=ExtResource("1_x2eak")]
+
+[node name="Stoke Flames" parent="." instance=ExtResource("2_2e3fn")]
+
+[node name="Stir Pot" parent="." instance=ExtResource("3_ek0c0")]
+
+[node name="AltSpit" parent="." instance=ExtResource("5_du6sl")]

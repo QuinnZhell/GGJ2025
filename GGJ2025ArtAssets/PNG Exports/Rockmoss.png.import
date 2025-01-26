@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cweajcxvhbipr"
-path="res://.godot/imported/wider shelf.png-1b6d1f2814f061cef7e70aabe6538672.ctex"
+uid="uid://baq7lycdt6aex"
+path="res://.godot/imported/Rockmoss.png-542fab9c8c302a0bbf9ea3cca7262489.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GGJ2025ArtAssets/PNG Exports/wider shelf.png"
-dest_files=["res://.godot/imported/wider shelf.png-1b6d1f2814f061cef7e70aabe6538672.ctex"]
+source_file="res://GGJ2025ArtAssets/PNG Exports/Rockmoss.png"
+dest_files=["res://.godot/imported/Rockmoss.png-542fab9c8c302a0bbf9ea3cca7262489.ctex"]
 
 [params]
 

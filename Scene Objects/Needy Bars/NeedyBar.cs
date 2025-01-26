@@ -128,12 +128,10 @@ public partial class NeedyBar : Control
         if (distance < GoalLenience * 0.5f)
         {
             Score += 3 * (float)GetProcessDeltaTime(); // Double score for gold area
-            GD.Print("Score: " + Score);
         }
         else if (distance > GoalLenience)
         {
             Score -= 3 * (float)GetProcessDeltaTime(); // Regular score for light green area
-            GD.Print("Score: " + Score);
         }
 
     }
@@ -196,17 +194,5 @@ public partial class NeedyBar : Control
         Score = 0;
         BarSpeed = 0.1f;
         Score = 100f;
-    }
-
-    public override void _Input(InputEvent @event)
-    {
-        if (@event.IsActionPressed("press_left"))
-        {
-            SetFlatAddition(-5f);
-        }
-        if (@event.IsActionPressed("press_right"))
-        {
-            SetFlatAddition(5f);
-        }
     }
 }

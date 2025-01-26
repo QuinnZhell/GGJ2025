@@ -31,7 +31,7 @@ public partial class stoke : Sprite2D
 		}
 		else if (!isOn && temperature > minTemperature)
 		{
-			temperature -= (float)(5.0f * delta); // Cool down when the stove is off
+			temperature -= (float)(10.0f * delta); // Cool down when the stove is off
 		}
 
 		temperature = Mathf.Clamp(temperature, minTemperature, maxTemperature); // Ensure within limits
@@ -61,13 +61,13 @@ public partial class stoke : Sprite2D
 		}
 
 	}
-
+	
 	private void ChangeColour()
 	{
 		// Adjust color based on temperature
 		float t = temperature / maxTemperature; // Normalize temperature to a 0-1 range
 		Modulate = new Color(1, 1 - t, 1 - t); // Change color from white to red as it heats
 
-		GD.Print("Stove is " + (isOn ? "On" : "Off") + " at " + temperature + " degrees");
+		//GD.Print("Stove is " + (isOn ? "On" : "Off") + " at " + temperature + " degrees");
 	}
 }

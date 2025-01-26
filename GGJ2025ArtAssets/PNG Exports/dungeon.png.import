@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cweajcxvhbipr"
-path="res://.godot/imported/wider shelf.png-1b6d1f2814f061cef7e70aabe6538672.ctex"
+uid="uid://c07rw0ja3p3yc"
+path="res://.godot/imported/dungeon.png-b000091c328a455020397374bf42ab5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GGJ2025ArtAssets/PNG Exports/wider shelf.png"
-dest_files=["res://.godot/imported/wider shelf.png-1b6d1f2814f061cef7e70aabe6538672.ctex"]
+source_file="res://GGJ2025ArtAssets/PNG Exports/dungeon.png"
+dest_files=["res://.godot/imported/dungeon.png-b000091c328a455020397374bf42ab5d.ctex"]
 
 [params]
 
