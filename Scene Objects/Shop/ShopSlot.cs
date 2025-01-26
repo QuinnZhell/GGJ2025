@@ -76,14 +76,14 @@ public partial class ShopSlot : Button
     // This method runs when the button is clicked
     private void OnButtonPressed()
     {
-        GameMaster.inventory.AddGold(TryToBuy(GameMaster.inventory.GetCoins()));
+        GameMaster.inventory.setGold(TryToBuy(GameMaster.inventory.GetCoins()));
         display.UpdateGold();
         
     }
 
     private int TryToBuy(int cash)
     {
-        if (cash > FinalPrice)
+        if (cash >= FinalPrice)
         {
             cash -= FinalPrice;
             ShowMessage("Purchased", true);
@@ -94,7 +94,7 @@ public partial class ShopSlot : Button
         else
         {
             ShowMessage("Not Enough!", false);
-            sfx.Stream = GD.Load<AudioStream>("res://assets/audio/fire-sound-222359.mp3");
+            sfx.Stream = GD.Load<AudioStream>("res://GGJ2025ArtAssets/SFX/laugh sound effect.wav");
             sfx.Play();
         }
 

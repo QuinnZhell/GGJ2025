@@ -60,7 +60,6 @@ public static class GameMaster
     public static void startRequest(Request chosenRequest)
 	{
 		request = chosenRequest;
-		potion = new Potion();
 	}
 
 	public static void earnGold(int gold)

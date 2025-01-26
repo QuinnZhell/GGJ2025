@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wrpsxdpour7j"
+path="res://.godot/imported/laugh sound effect.mp3-9353e16904a8c916a662128038a2a216.mp3str"
+
+[deps]
+
+source_file="res://GGJ2025ArtAssets/SFX/laugh sound effect.mp3"
+dest_files=["res://.godot/imported/laugh sound effect.mp3-9353e16904a8c916a662128038a2a216.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

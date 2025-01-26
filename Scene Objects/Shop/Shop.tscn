@@ -142,6 +142,7 @@ text = "Continue"
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="MarginContainer"]
 stream = ExtResource("8_ra7g2")
+volume_db = -15.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
