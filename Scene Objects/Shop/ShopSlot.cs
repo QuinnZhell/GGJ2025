@@ -85,13 +85,15 @@ public partial class ShopSlot : Button
         {
             money -= FinalPrice;
             ShowMessage("Purchased", true);
-            sfx.Stream = GD.Load<AudioStream>("res://assets/audio/fire-sound-222359.mp3");
+            sfx.Stream = GD.Load<AudioStream>("res://GGJ2025ArtAssets/SFX/Purchase.wav");
             sfx.Play();
             //Add 1 of item to inventory here..
         }
         else
         {
             ShowMessage("Not Enough!", false);
+            sfx.Stream = GD.Load<AudioStream>("res://assets/audio/fire-sound-222359.mp3");
+            sfx.Play();
         }
 
         return money;
@@ -102,27 +104,22 @@ public partial class ShopSlot : Button
         if (_popUp != null)
         {
             // Make the popup position relative to the button.
-            _popUp.Position = new Vector2I((int)Position.X + 200, (int)Position.Y - 25);  // Convert to Vector2I
+            _popUp.Position = new Vector2I((int)Position.X + 150, (int)Position.Y + 50);  // Convert to Vector2I
         }
     }
     private async void ShowMessage(string text, bool isPurchased)
     {
-        // Create a new label
         Label messageLabel = new Label();
         messageLabel.Text = text;
+        messageLabel.AddThemeFontSizeOverride("font_size", 24); // Increase font size
 
-        // Set the label's color based on the condition
-        messageLabel.Modulate = isPurchased ? new Godot.Color(0, 1, 0) : new Godot.Color(1, 0, 0); // Green for "Purchased", Red for "Not enough!"
+        messageLabel.Modulate = isPurchased ? new Godot.Color(0, 1, 0) : new Godot.Color(1, 0, 0);
 
-        // Position the label at the button's position
-
-        AddChild(messageLabel); // Add the label to the scene
+        AddChild(messageLabel);
         messageLabel.GlobalPosition = new Vector2(GlobalPosition.X + 55, GlobalPosition.Y + 60);
 
-        // Wait for the animation duration before hiding and removing the label
         await ToSignal(GetTree().CreateTimer(messageDuration), "timeout");
 
-        // Remove the label from the scene after the animation duration
         messageLabel.QueueFree();
     }
 
