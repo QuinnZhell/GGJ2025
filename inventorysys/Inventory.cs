@@ -5,8 +5,16 @@ using System.Linq;
 public partial class Inventory : Node
 {
 	private Godot.Collections.Array<InvContainer> _containerArray;
-	private int _coins;
+	private int _coins = GameMaster.STARTING_GOLD;
 
+    public void setGold(int gold)
+    {
+        _coins = gold;
+    }
+    public int getGold()
+    {
+        return _coins;
+    }
 
     #region Accessor methods
 

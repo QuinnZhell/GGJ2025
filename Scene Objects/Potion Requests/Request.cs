@@ -12,17 +12,17 @@ public partial class Request : Node2D
 	private Potion potion;
 	private Task[] tasks;
 
-	public Request(int score, int reward, Potion potion)
+	public Request(int score, int reward)
 	{
-		setMinScore(score);
+		setMinScore(score*GameMaster.day);
 		setGoldReward(reward);
-		setPotion(potion);
+		potion = GameMaster.potion;
 	}
-    public Request(int score, int reward, Potion potion, Task[] tasks)
+    public Request(int score, int reward, Task[] tasks)
     {
         setMinScore(score);
         setGoldReward(reward);
-		setPotion(potion);
+		potion = GameMaster.potion;
         setTasks(tasks);
     }
 
@@ -38,10 +38,6 @@ public partial class Request : Node2D
 	public void setTasks(Task[] tasks)
 	{
 		this.tasks = tasks;
-	}
-	public void setPotion(Potion potion)
-	{
-		this.potion = potion;
 	}
 	public int getMinScore()
 	{
@@ -77,6 +73,15 @@ public partial class Request : Node2D
 		}
         return fulfilled;
     }
+	//Call at end of timer
+	public bool end()
+	{
+		if (complete())
+		{
+			GameMaster.earnGold(goldReward);
+		}
+		return fulfilled;
+	}
     
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
