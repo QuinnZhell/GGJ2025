@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://c538sgb52accb"]
+[gd_scene load_steps=10 format=3 uid="uid://c538sgb52accb"]
 
 [ext_resource type="PackedScene" uid="uid://bbq7atirofrct" path="res://Scene Objects/Shop/ShopSlot.tscn" id="1_l38yv"]
 [ext_resource type="Texture2D" uid="uid://cou2svbi0imnt" path="res://assets/Sprites/gold_coin.png" id="2_mkqy8"]
+[ext_resource type="Script" path="res://Scene Objects/Shop/GoldDisplay.cs" id="2_wubaq"]
 [ext_resource type="FontFile" uid="uid://cnjgmrqnttnsn" path="res://Fonts/Retro Gaming.ttf" id="3_7inmk"]
 [ext_resource type="AudioStream" uid="uid://cau56jxrncuod" path="res://GGJ2025ArtAssets/Music/ShopMenuMusic.wav" id="4_ghfmv"]
 [ext_resource type="Texture2D" uid="uid://5aw8moj0si8i" path="res://GGJ2025ArtAssets/PNG Exports/wider shelf.png" id="5_8gpv6"]
 [ext_resource type="Script" path="res://Scene Objects/Shop/SceneChange.cs" id="6_6yk8o"]
+[ext_resource type="AudioStream" uid="uid://dcj7jiyy2rpbh" path="res://GGJ2025ArtAssets/SFX/Click.wav" id="8_ra7g2"]
+[ext_resource type="Script" path="res://Scene Objects/Shop/ScrollRequest.cs" id="9_2qu2r"]
 
 [node name="ShopMaster" type="Control"]
 layout_mode = 3
@@ -27,6 +30,7 @@ grow_horizontal = 0
 theme_override_fonts/normal_font = ExtResource("3_7inmk")
 theme_override_font_sizes/normal_font_size = 50
 text = "Gold: 9999"
+script = ExtResource("2_wubaq")
 metadata/_edit_lock_ = true
 
 [node name="Gold Sprite" type="Sprite2D" parent="Gold"]
@@ -117,6 +121,7 @@ texture = ExtResource("5_8gpv6")
 metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_left = 857.0
 offset_top = 377.0
 offset_right = 1284.0
@@ -134,6 +139,23 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_7inmk")
 theme_override_font_sizes/font_size = 50
 text = "Continue"
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="MarginContainer"]
+stream = ExtResource("8_ra7g2")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 857.0
+offset_top = -54.0
+offset_right = 1249.0
+offset_bottom = 409.0
+script = ExtResource("9_2qu2r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(0, 480)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/continue" to="MarginContainer" method="_on_continue_pressed"]
 

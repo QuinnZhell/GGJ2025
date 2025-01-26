@@ -9,24 +9,24 @@ public partial class ShopSlot : Button
     //public Inventory inv;
 
     //Temp int for cash till we get inv, change to reference to players current cash
-    int money;
 	int IngredientPrice;
     int FinalPrice;
     //[Export] private Ingredient _ingredient;
     private PopupPanel _popUp;
     private AudioStreamPlayer2D sfx;
+    GoldDisplay display;
 
     // Duration for which the message will be shown
     private const float messageDuration = 1.0f;
 
     public override void _Ready()
     {
-        money = 100;
         _popUp = GetNode<PopupPanel>("ItemInfo");
         Control _control = _popUp.GetNode<Control>("Control");
         RichTextLabel _itemName = _control.GetNode<RichTextLabel>("Item Name");
         RichTextLabel _price = _control.GetNode<RichTextLabel>("Price");
         RichTextLabel _desc = _control.GetNode<RichTextLabel>("Desc");
+        display = GetParent().GetNode<GoldDisplay>("Gold");
         sfx = GetNode<AudioStreamPlayer2D>("ShopSFX");
 
         UpdatePopupPosition();
@@ -76,14 +76,16 @@ public partial class ShopSlot : Button
     // This method runs when the button is clicked
     private void OnButtonPressed()
     {
-        money = TryToBuy(money);
+        GameMaster.inventory.AddGold(TryToBuy(GameMaster.inventory.GetCoins()));
+        display.UpdateGold();
+        
     }
 
     private int TryToBuy(int cash)
     {
-        if (money > FinalPrice)
+        if (cash > FinalPrice)
         {
-            money -= FinalPrice;
+            cash -= FinalPrice;
             ShowMessage("Purchased", true);
             sfx.Stream = GD.Load<AudioStream>("res://GGJ2025ArtAssets/SFX/Purchase.wav");
             sfx.Play();
@@ -96,7 +98,7 @@ public partial class ShopSlot : Button
             sfx.Play();
         }
 
-        return money;
+        return cash;
     }
 
     private void UpdatePopupPosition()

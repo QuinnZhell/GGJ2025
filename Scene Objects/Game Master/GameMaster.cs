@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 public static class GameMaster
 {
 	public static Potion potion;
-	public static Inventory inventory;
+	public static Inventory inventory = new Inventory();
 	public static int day = 1;
 	public static List<Request> requests = new List<Request>();
 	private static Random rand = new Random();
@@ -21,7 +21,7 @@ public static class GameMaster
         for (int i = 0; i < numRequests; i++)
 		{
 			
-			requests.Add(new Request(calcMinScore(),calcGoldReward()));
+			//requests.Add(new Request(calcMinScore(),calcGoldReward()));
 		}
 
 		return;
@@ -52,7 +52,7 @@ public static class GameMaster
     //Call when a request needs to start
     public static void startRequest()
 	{
-		potion = new Potion();
+		//potion = new Potion();
 	}
 	public static void newDay()
 	{
