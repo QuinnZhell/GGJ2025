@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bumnuytfwstx4"
-path="res://.godot/imported/MainMenu.png-66f6367ffa013fcb30eb636748f50c29.ctex"
+uid="uid://b7gr2skmfafir"
+path="res://.godot/imported/Cauldron.png-9f4ab87c24c49b53f3bbe64b9e03185e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GGJ2025ArtAssets/PNG Exports/MainMenu.png"
-dest_files=["res://.godot/imported/MainMenu.png-66f6367ffa013fcb30eb636748f50c29.ctex"]
+source_file="res://GGJ2025ArtAssets/PNG Exports/Cauldron.png"
+dest_files=["res://.godot/imported/Cauldron.png-9f4ab87c24c49b53f3bbe64b9e03185e.ctex"]
 
 [params]
 
