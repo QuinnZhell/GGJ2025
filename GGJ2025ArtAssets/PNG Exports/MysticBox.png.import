@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cweajcxvhbipr"
-path="res://.godot/imported/wider shelf.png-1b6d1f2814f061cef7e70aabe6538672.ctex"
+uid="uid://b2mimj164ct6i"
+path="res://.godot/imported/MysticBox.png-dc1bc339a688680c20dbb8f8729d9d69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GGJ2025ArtAssets/PNG Exports/wider shelf.png"
-dest_files=["res://.godot/imported/wider shelf.png-1b6d1f2814f061cef7e70aabe6538672.ctex"]
+source_file="res://GGJ2025ArtAssets/PNG Exports/MysticBox.png"
+dest_files=["res://.godot/imported/MysticBox.png-dc1bc339a688680c20dbb8f8729d9d69.ctex"]
 
 [params]
 
