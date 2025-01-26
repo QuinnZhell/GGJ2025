@@ -6,29 +6,28 @@ public partial class ShopSlot : Button
 {
 
     //Get reference to players inv here
-    public Inventory inv;
+    //public Inventory inv;
 
     //Temp int for cash till we get inv, change to reference to players current cash
     int money;
 	int IngredientPrice;
     int FinalPrice;
-    [Export] private Ingredient _ingredient;
+    //[Export] private Ingredient _ingredient;
     private PopupPanel _popUp;
+    private AudioStreamPlayer2D sfx;
 
     // Duration for which the message will be shown
     private const float messageDuration = 1.0f;
 
-    // Time for the animation
-    private const float animationDuration = 0.5f;
-
     public override void _Ready()
     {
-        money = inv.GetCoins();
+        money = 100;
         _popUp = GetNode<PopupPanel>("ItemInfo");
         Control _control = _popUp.GetNode<Control>("Control");
         RichTextLabel _itemName = _control.GetNode<RichTextLabel>("Item Name");
         RichTextLabel _price = _control.GetNode<RichTextLabel>("Price");
         RichTextLabel _desc = _control.GetNode<RichTextLabel>("Desc");
+        sfx = GetNode<AudioStreamPlayer2D>("ShopSFX");
 
         UpdatePopupPosition();
 
@@ -40,10 +39,11 @@ public partial class ShopSlot : Button
             SalePercentage = x * 10;
         }
 
-        FinalPrice = _ingredient.baseCost * (100 - SalePercentage) / 100;
+        // FinalPrice = _ingredient.baseCost * (100 - SalePercentage) / 100;
+        FinalPrice = 20;
 
-        _itemName.Text = _ingredient.name;
-        _desc.Text = _ingredient.description;
+        //_itemName.Text = _ingredient.name;
+       // _desc.Text = _ingredient.description;
 
         if(SalePercentage != 0)
         {
@@ -85,6 +85,8 @@ public partial class ShopSlot : Button
         {
             money -= FinalPrice;
             ShowMessage("Purchased", true);
+            sfx.Stream = GD.Load<AudioStream>("res://assets/audio/fire-sound-222359.mp3");
+            sfx.Play();
             //Add 1 of item to inventory here..
         }
         else

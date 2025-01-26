@@ -38,3 +38,6 @@ offset_left = 53.0
 offset_top = 36.0
 offset_right = 253.0
 offset_bottom = 236.0
+
+[node name="BG Music" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
