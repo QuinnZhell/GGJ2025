@@ -5,20 +5,19 @@ using System.Drawing;
 public partial class ShopSlot : Button
 {
 
-	//Get reference to players inv here..
+    //Get reference to players inv here
+    //public Inventory inv;
 
-	//Temp int for cash till we get inv, change to reference to players current cash
-	int money = 100; 
+    //Temp int for cash till we get inv, change to reference to players current cash
 	int IngredientPrice;
     int FinalPrice;
-   //[Export] private ingredientProperties _ingredient;
+    //[Export] private Ingredient _ingredient;
     private PopupPanel _popUp;
+    private AudioStreamPlayer2D sfx;
+    GoldDisplay display;
 
     // Duration for which the message will be shown
     private const float messageDuration = 1.0f;
-
-    // Time for the animation
-    private const float animationDuration = 0.5f;
 
     public override void _Ready()
     {
@@ -27,6 +26,8 @@ public partial class ShopSlot : Button
         RichTextLabel _itemName = _control.GetNode<RichTextLabel>("Item Name");
         RichTextLabel _price = _control.GetNode<RichTextLabel>("Price");
         RichTextLabel _desc = _control.GetNode<RichTextLabel>("Desc");
+        display = GetParent().GetNode<GoldDisplay>("Gold");
+        sfx = GetNode<AudioStreamPlayer2D>("ShopSFX");
 
         UpdatePopupPosition();
 
@@ -38,10 +39,11 @@ public partial class ShopSlot : Button
             SalePercentage = x * 10;
         }
 
-       // FinalPrice = _ingredient.BasePrice * (100 - SalePercentage) / 100;
+        // FinalPrice = _ingredient.baseCost * (100 - SalePercentage) / 100;
+        FinalPrice = 20;
 
-        //_itemName.Text = _ingredient.Name;
-       // _desc.Text = _ingredient.Description;
+        //_itemName.Text = _ingredient.name;
+       // _desc.Text = _ingredient.description;
 
         if(SalePercentage != 0)
         {
@@ -74,23 +76,29 @@ public partial class ShopSlot : Button
     // This method runs when the button is clicked
     private void OnButtonPressed()
     {
-        money = TryToBuy(money);
+        GameMaster.inventory.AddGold(TryToBuy(GameMaster.inventory.GetCoins()));
+        display.UpdateGold();
+        
     }
 
     private int TryToBuy(int cash)
     {
-        if (money > FinalPrice)
+        if (cash > FinalPrice)
         {
-            money -= FinalPrice;
+            cash -= FinalPrice;
             ShowMessage("Purchased", true);
+            sfx.Stream = GD.Load<AudioStream>("res://GGJ2025ArtAssets/SFX/Purchase.wav");
+            sfx.Play();
             //Add 1 of item to inventory here..
         }
         else
         {
             ShowMessage("Not Enough!", false);
+            sfx.Stream = GD.Load<AudioStream>("res://assets/audio/fire-sound-222359.mp3");
+            sfx.Play();
         }
 
-        return money;
+        return cash;
     }
 
     private void UpdatePopupPosition()
@@ -98,27 +106,22 @@ public partial class ShopSlot : Button
         if (_popUp != null)
         {
             // Make the popup position relative to the button.
-            _popUp.Position = new Vector2I((int)Position.X + 200, (int)Position.Y - 25);  // Convert to Vector2I
+            _popUp.Position = new Vector2I((int)Position.X + 150, (int)Position.Y + 50);  // Convert to Vector2I
         }
     }
     private async void ShowMessage(string text, bool isPurchased)
     {
-        // Create a new label
         Label messageLabel = new Label();
         messageLabel.Text = text;
+        messageLabel.AddThemeFontSizeOverride("font_size", 24); // Increase font size
 
-        // Set the label's color based on the condition
-        messageLabel.Modulate = isPurchased ? new Godot.Color(0, 1, 0) : new Godot.Color(1, 0, 0); // Green for "Purchased", Red for "Not enough!"
+        messageLabel.Modulate = isPurchased ? new Godot.Color(0, 1, 0) : new Godot.Color(1, 0, 0);
 
-        // Position the label at the button's position
-
-        AddChild(messageLabel); // Add the label to the scene
+        AddChild(messageLabel);
         messageLabel.GlobalPosition = new Vector2(GlobalPosition.X + 55, GlobalPosition.Y + 60);
 
-        // Wait for the animation duration before hiding and removing the label
         await ToSignal(GetTree().CreateTimer(messageDuration), "timeout");
 
-        // Remove the label from the scene after the animation duration
         messageLabel.QueueFree();
     }
 
