@@ -1,14 +1,15 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://dssy24rthe2xb"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://b87ek5co1xy4o"]
 
-[ext_resource type="Script" path="res://inventorysys/Ingredient.cs" id="1_1i6eq"]
-[ext_resource type="Resource" uid="uid://chixhekokx07h" path="res://inventorysys/Ingredient Property Templates/bubbly.tres" id="1_ns5dt"]
+[ext_resource type="Resource" uid="uid://c0i8lqnlegp1b" path="res://inventorysys/Ingredient Property Templates/bubbly.tres" id="1_5cdok"]
+[ext_resource type="Script" path="res://inventorysys/Ingredient.cs" id="1_oyd5x"]
 
 [resource]
-script = ExtResource("1_1i6eq")
-Name = "Salt"
-Description = "Salt straight from the sea!"
-baseCost = 1.5
-properties = ExtResource("1_ns5dt")
+script = ExtResource("1_oyd5x")
+name = "Salt"
+description = "Salt Straight from the Serious Sea"
+baseCost = 1
+properties = ExtResource("1_5cdok")
 useCooldown = false
+useMultiplicative = false
 onCooldown = false
 cdTime = 0.5

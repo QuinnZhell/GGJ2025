@@ -23,11 +23,11 @@ public partial class IngredientProperties : Resource
      * impulse stats are how much the bars change on the tick you add the ingredient to the potion. They have no lasting effect on the potion 
      * 
      * If you need to add more attributes, adjust 1. the enum at the top of this file, 2. the random number generator in the empty constructor class, 3. the switch case to allow the RNG to be used and your affect to be applied
-     * 
+     * Also, inventory generates based on a hard coded number. This number is found in the loop and then subseqyent switch in inventory CS, Generate() method. YOu need to change that if you change this too. 
      * 
      */
 
-    #region vars
+
     //base stats which effect the potions overall score
     [Export]
     public Vector3 baseStats { get; set; }
@@ -43,7 +43,7 @@ public partial class IngredientProperties : Resource
     //Attribute which ingredient adds
     [Export]
     public Attributes attribute { get; set; }
-    #endregion
+   
 
     #region constructors
     public IngredientProperties (Vector3 bs, Vector3 ds, Vector3 ips, Attributes att)
@@ -57,12 +57,11 @@ public partial class IngredientProperties : Resource
     //Randomise it
     public IngredientProperties()
     {
+
         var random = new RandomNumberGenerator();
         random.Randomize();
-        //Randomise the bubble, potency, and stability scores
-        Vector3 x = new Vector3(random.RandfRange(-1f, 1f), random.RandfRange(-1f, 1f), random.RandfRange(-1f, 1f));
-        Vector3 y = new Vector3(random.RandfRange(-0.1f, 0.1f), random.RandfRange(-0.1f, 0.1f), random.RandfRange(-0.1f, 0.1f));
-        Vector3 z = new Vector3(random.RandfRange(-0.5f, 0.5f), random.RandfRange(-0.5f, 0.5f), random.RandfRange(-0.5f, 0.5f));
+
+        RNGStats(random);
 
         int a = random.RandiRange(0, 10);
         switch (a)
@@ -112,9 +111,17 @@ public partial class IngredientProperties : Resource
                 break;
         } //Assign random number to enum
 
-        baseStats = x;
-        dynamicStats = y;
-        impulseStats = z;
+    }
+
+    //Randomise all, but set a known attribute
+    public IngredientProperties (Attributes x)
+    {
+        var random = new RandomNumberGenerator();
+        random.Randomize();
+
+        attribute = x;
+        
+        RNGStats(random);
     }
 
     #endregion
@@ -139,6 +146,24 @@ public partial class IngredientProperties : Resource
     public Attributes GetAttribute()
     {
         return attribute;
+    }
+
+    #endregion
+
+    #region private methods
+
+    private void RNGStats(RandomNumberGenerator random)
+    {
+        
+        //Randomise the bubble, potency, and stability scores
+        Vector3 x = new Vector3(random.RandfRange(-1f, 1f), random.RandfRange(-1f, 1f), random.RandfRange(-1f, 1f));
+        Vector3 y = new Vector3(random.RandfRange(-0.1f, 0.1f), random.RandfRange(-0.1f, 0.1f), random.RandfRange(-0.1f, 0.1f));
+        Vector3 z = new Vector3(random.RandfRange(-0.5f, 0.5f), random.RandfRange(-0.5f, 0.5f), random.RandfRange(-0.5f, 0.5f));
+
+
+        baseStats = x;
+        dynamicStats = y;
+        impulseStats = z;
     }
 
     #endregion
