@@ -12,7 +12,7 @@ public partial class Cauldron : Node2D
 	public override void _Ready()
 	{
 		stoke = GetNode<Node2D>("Stoke Flames").GetNode<Sprite2D>("Sprite2D") as stoke;
-        stir = GetNode<Node2D>("Stir Pot").GetNode<Sprite2D>("ladle") as stir;
+		stir = GetNode<Node2D>("Stir Pot").GetNode<Node2D>("Stir Pot") as stir;
 		spit = GetNode<Node2D>("AltSpit") as AltSpit;
         barMaster = GetNode<Node2D>("Potion").GetNode<BarMaster>("BarMaster");
 	}

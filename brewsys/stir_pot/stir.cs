@@ -20,9 +20,6 @@ public partial class stir : Node2D
 
 	public override void _Ready()
 	{
-		cauldron = GetNode<Sprite2D>("Cauldron");
-		GD.Print(cauldron.Position);
-		potPosition = cauldron.Position;
 	}
 
 	public override void _Process(double delta)
